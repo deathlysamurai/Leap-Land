@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://drrgt1yo123m"]
+
+[ext_resource type="Script" uid="uid://bqhijsm3h0uox" path="res://Scenes/Shop/shop.gd" id="1_8dak6"]
+[ext_resource type="Texture2D" uid="uid://miyd62rsvcpm" path="res://assets/oak_woods_v1.0/decorations/shop.png" id="1_78vcx"]
+[ext_resource type="PackedScene" uid="uid://bp5tlshae6i4m" path="res://Scenes/Shop/shop_screen.tscn" id="2_dqdqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78vcx"]
+size = Vector2(58, 54)
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_8dak6")
+
+[node name="ShopSprite" type="Sprite2D" parent="."]
+z_index = 3
+texture = ExtResource("1_78vcx")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+z_index = 10
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_78vcx")
+
+[node name="ShopScreen" parent="." instance=ExtResource("2_dqdqq")]
+visible = false

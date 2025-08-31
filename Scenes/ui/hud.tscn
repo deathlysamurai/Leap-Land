@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://c44nn4n0sab58"]
+
+[ext_resource type="Script" uid="uid://b04rwmsm8ool1" path="res://Scenes/ui/hud.gd" id="1_8ercd"]
+[ext_resource type="PackedScene" uid="uid://bdewf8xr2fmcy" path="res://Scenes/ui/hud_coins.tscn" id="1_ateb2"]
+[ext_resource type="PackedScene" uid="uid://i1vvmo6trrmf" path="res://Scenes/ui/hud_treats.tscn" id="3_kpdpg"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_8ercd")
+hud_coin_scene = ExtResource("1_ateb2")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HudTreats" parent="MarginContainer" instance=ExtResource("3_kpdpg")]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="CoinContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = -5
+
+[node name="HUDCoins" parent="MarginContainer/VBoxContainer/CoinContainer" instance=ExtResource("1_ateb2")]
+layout_mode = 2

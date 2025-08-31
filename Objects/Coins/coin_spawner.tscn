@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://vr0pv42p1aof"]
+
+[ext_resource type="PackedScene" uid="uid://cdedvqvlw120n" path="res://Objects/Coins/coin.tscn" id="1_1hdfs"]
+[ext_resource type="Script" uid="uid://d1scme76ux84y" path="res://Objects/Coins/coin_spawner.gd" id="1_qxs8h"]
+
+[node name="CoinSpawner" type="Node2D"]
+z_index = 10
+script = ExtResource("1_qxs8h")
+coin_scene = ExtResource("1_1hdfs")
+
+[node name="Coin" parent="." instance=ExtResource("1_1hdfs")]
+
+[connection signal="tree_exited" from="Coin" to="." method="_on_coin_tree_exited"]

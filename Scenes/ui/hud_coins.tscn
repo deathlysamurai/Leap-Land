@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdewf8xr2fmcy"]
+
+[ext_resource type="Script" uid="uid://b8s15y8i2lv1n" path="res://Scenes/ui/hud_coins.gd" id="1_f74p3"]
+[ext_resource type="Texture2D" uid="uid://l2imy7qhim78" path="res://assets/coins/coin-ball.png" id="2_0hr2m"]
+[ext_resource type="Resource" uid="uid://b43b4xt0w1ck5" path="res://resources/number_textures.tres" id="2_tejev"]
+[ext_resource type="Texture2D" uid="uid://twui7h0rgur6" path="res://assets/Kenny_HUD/hud_character_multiply.png" id="3_eptfu"]
+[ext_resource type="Texture2D" uid="uid://cooq5um6lekew" path="res://assets/Kenny_HUD/hud_character_9.png" id="4_tejev"]
+
+[node name="HUDCoins" type="HBoxContainer"]
+theme_override_constants/separation = -8
+script = ExtResource("1_f74p3")
+number_texture = ExtResource("2_tejev")
+
+[node name="CoinTexture" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_0hr2m")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CountContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = -24
+
+[node name="MultiplierTexture" type="TextureRect" parent="CountContainer"]
+layout_mode = 2
+texture = ExtResource("3_eptfu")
+
+[node name="DigitsContainer" type="HBoxContainer" parent="CountContainer"]
+layout_mode = 2
+theme_override_constants/separation = -32
+
+[node name="ThousandsCountTexture" type="TextureRect" parent="CountContainer/DigitsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_tejev")
+
+[node name="HundredsCountTexture" type="TextureRect" parent="CountContainer/DigitsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_tejev")
+
+[node name="TensCountTexture" type="TextureRect" parent="CountContainer/DigitsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_tejev")
+
+[node name="OnesCountTexture" type="TextureRect" parent="CountContainer/DigitsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("4_tejev")

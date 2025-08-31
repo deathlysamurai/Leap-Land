@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="NumberTextures" load_steps=12 format=3 uid="uid://b43b4xt0w1ck5"]
+
+[ext_resource type="Script" uid="uid://bt11jgkvtmf8f" path="res://resources/number_textures.gd" id="1_5p4tu"]
+[ext_resource type="Texture2D" uid="uid://dvuy8deyuig5r" path="res://assets/Kenny_HUD/hud_character_0.png" id="1_bc8ab"]
+[ext_resource type="Texture2D" uid="uid://b71rsy4ldw40t" path="res://assets/Kenny_HUD/hud_character_1.png" id="2_cgjrn"]
+[ext_resource type="Texture2D" uid="uid://wpgla2mpnvv8" path="res://assets/Kenny_HUD/hud_character_2.png" id="3_nbutm"]
+[ext_resource type="Texture2D" uid="uid://14a4qhugg3vq" path="res://assets/Kenny_HUD/hud_character_3.png" id="4_5ir1c"]
+[ext_resource type="Texture2D" uid="uid://ddty5c51g4hyx" path="res://assets/Kenny_HUD/hud_character_4.png" id="5_58nd4"]
+[ext_resource type="Texture2D" uid="uid://55v46hww2cni" path="res://assets/Kenny_HUD/hud_character_5.png" id="6_c56gm"]
+[ext_resource type="Texture2D" uid="uid://dw7ucl4swgbb0" path="res://assets/Kenny_HUD/hud_character_6.png" id="7_vx87r"]
+[ext_resource type="Texture2D" uid="uid://77jyd38s4re8" path="res://assets/Kenny_HUD/hud_character_7.png" id="8_0d1mh"]
+[ext_resource type="Texture2D" uid="uid://brqfb15dcnw7s" path="res://assets/Kenny_HUD/hud_character_8.png" id="9_musaf"]
+[ext_resource type="Texture2D" uid="uid://cooq5um6lekew" path="res://assets/Kenny_HUD/hud_character_9.png" id="10_u5pq6"]
+
+[resource]
+script = ExtResource("1_5p4tu")
+numbers = Array[Texture]([ExtResource("1_bc8ab"), ExtResource("2_cgjrn"), ExtResource("3_nbutm"), ExtResource("4_5ir1c"), ExtResource("5_58nd4"), ExtResource("6_c56gm"), ExtResource("7_vx87r"), ExtResource("8_0d1mh"), ExtResource("9_musaf"), ExtResource("10_u5pq6")])
+metadata/_custom_type_script = "uid://bt11jgkvtmf8f"

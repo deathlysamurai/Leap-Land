@@ -1,0 +1,98 @@
+[gd_scene load_steps=15 format=3 uid="uid://kkmdtpgfoi76"]
+
+[ext_resource type="Script" uid="uid://ckqc41mp582ww" path="res://Scenes/Player/player.gd" id="1_xpcdj"]
+[ext_resource type="SpriteFrames" uid="uid://c6u4fg7pou0xh" path="res://resources/SpriteFrames/samurai.tres" id="2_jhyir"]
+[ext_resource type="PackedScene" uid="uid://c7caxmmylmlsu" path="res://States/state_machine.tscn" id="4_mtuoh"]
+[ext_resource type="Script" uid="uid://cak44u1vbruc0" path="res://States/Player/player_idle.gd" id="5_dd0ac"]
+[ext_resource type="Script" uid="uid://r5ylht6tixvw" path="res://States/Player/player_sprint.gd" id="6_0u5uq"]
+[ext_resource type="Script" uid="uid://4iwkcwyn804y" path="res://States/Player/player_fall.gd" id="7_0u5uq"]
+[ext_resource type="Script" uid="uid://cv0svr3oxc17m" path="res://States/Player/player_walk.gd" id="8_jlvik"]
+[ext_resource type="Script" uid="uid://c2sx32b3nkru6" path="res://States/Player/player_jump.gd" id="9_gk6dx"]
+[ext_resource type="Script" uid="uid://c31ubmvhiwiod" path="res://Scenes/Player/hazard_area_2d.gd" id="10_jhyir"]
+[ext_resource type="Script" uid="uid://bjf0uw1j7j2vn" path="res://Scenes/Player/shop_area_2d.gd" id="11_74mp2"]
+[ext_resource type="AudioStream" uid="uid://c3x1g4n1kb7s4" path="res://assets/FreeSFX/GameSFX/Bounce Jump/Retro Jump Classic 08.wav" id="11_oikmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xpcdj"]
+size = Vector2(28, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gk6dx"]
+size = Vector2(28, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhyir"]
+size = Vector2(28, 34)
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 10
+collision_mask = 2
+script = ExtResource("1_xpcdj")
+
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_jhyir")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 16)
+shape = SubResource("RectangleShape2D_xpcdj")
+
+[node name="StateMachine" parent="." node_paths=PackedStringArray("initial_state") instance=ExtResource("4_mtuoh")]
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("5_dd0ac")
+animation_name = "idle"
+metadata/_custom_type_script = "uid://bvmq6u7cd3ci0"
+
+[node name="Sprint" type="Node" parent="StateMachine"]
+script = ExtResource("6_0u5uq")
+animation_name = "sprint"
+metadata/_custom_type_script = "uid://bvmq6u7cd3ci0"
+
+[node name="Fall" type="Node" parent="StateMachine"]
+script = ExtResource("7_0u5uq")
+metadata/_custom_type_script = "uid://bvmq6u7cd3ci0"
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("8_jlvik")
+animation_name = "sprint"
+metadata/_custom_type_script = "uid://bvmq6u7cd3ci0"
+
+[node name="Jump" type="Node" parent="StateMachine" node_paths=PackedStringArray("jump_sound")]
+script = ExtResource("9_gk6dx")
+jump_sound = NodePath("../../JumpAudio")
+metadata/_custom_type_script = "uid://bvmq6u7cd3ci0"
+
+[node name="PickupArea2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea2D"]
+position = Vector2(4, 16)
+shape = SubResource("RectangleShape2D_gk6dx")
+
+[node name="HazardArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("10_jhyir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea2D"]
+position = Vector2(4, 16)
+shape = SubResource("RectangleShape2D_jhyir")
+
+[node name="ShopArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("11_74mp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShopArea2D"]
+position = Vector2(4, 16)
+shape = SubResource("RectangleShape2D_jhyir")
+
+[node name="JumpAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_oikmp")
+volume_db = -10.895
+pitch_scale = 0.5
+
+[connection signal="body_entered" from="HazardArea2D" to="HazardArea2D" method="_on_body_entered"]
+[connection signal="area_entered" from="ShopArea2D" to="ShopArea2D" method="_on_area_entered"]
+[connection signal="area_exited" from="ShopArea2D" to="ShopArea2D" method="_on_area_exited"]
+[connection signal="body_entered" from="ShopArea2D" to="ShopArea2D" method="_on_body_entered"]

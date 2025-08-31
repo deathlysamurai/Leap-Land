@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://53vqry6at7m7"]
+
+[ext_resource type="PackedScene" uid="uid://kkmdtpgfoi76" path="res://Scenes/Player/player.tscn" id="1_i22io"]
+
+[node name="Player" instance=ExtResource("1_i22io")]
+BASE_SPEED = 150.0
+BASE_JUMP_VELOCITY = -400.0

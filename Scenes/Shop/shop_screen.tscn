@@ -1,0 +1,264 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp5tlshae6i4m"]
+
+[ext_resource type="Script" uid="uid://baereonu2ssio" path="res://Scenes/Shop/shop_screen.gd" id="1_pctm8"]
+[ext_resource type="AudioStream" uid="uid://beb2j2w4vjye6" path="res://assets/FreeSFX/GameSFX/Events/Retro Event UI 01.wav" id="2_pe1n7"]
+
+[node name="ShopScreen" type="CanvasLayer"]
+script = ExtResource("1_pctm8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+z_index = 12
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+current_tab = 0
+
+[node name="Speed" type="MarginContainer" parent="MarginContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Speed"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Speed/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="SpeedLabel" type="Label" parent="MarginContainer/TabContainer/Speed/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Sprint Speed"
+
+[node name="CurrentSpeedLabel" type="Label" parent="MarginContainer/TabContainer/Speed/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+text = "1.0"
+
+[node name="SpeedMoneyButton" type="Button" parent="MarginContainer/TabContainer/Speed/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$5"
+
+[node name="Jump" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_tab_index = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Jump"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Jump/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="JumpPowerLabel" type="Label" parent="MarginContainer/TabContainer/Jump/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Jump Power"
+
+[node name="CurrentJumpPowerLabel" type="Label" parent="MarginContainer/TabContainer/Jump/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+text = "1.0"
+
+[node name="JumpPowerMoneyButton" type="Button" parent="MarginContainer/TabContainer/Jump/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$5"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/TabContainer/Jump/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="JumpCountLabel" type="Label" parent="MarginContainer/TabContainer/Jump/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Jump Count"
+
+[node name="CurrentJumpCountLabel" type="Label" parent="MarginContainer/TabContainer/Jump/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+text = "1"
+
+[node name="JumpCountMoneyButton" type="Button" parent="MarginContainer/TabContainer/Jump/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$40"
+
+[node name="Coin" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_tab_index = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Coin"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Coin/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="DonutLabel" type="Label" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Donut"
+
+[node name="DonutDescriptionLabel" type="Label" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "(Worth 2)"
+
+[node name="DonutMoneyButton" type="Button" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$150"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/TabContainer/Coin/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="GemLabel" type="Label" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Gem"
+
+[node name="GemDescriptionLabel" type="Label" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "(Worth 5)"
+
+[node name="GemMoneyButton" type="Button" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$450"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/TabContainer/Coin/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="DiamondLabel" type="Label" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Diamond"
+
+[node name="DiamondDescriptionLabel" type="Label" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "(Worth 10)"
+
+[node name="DiamondMoneyButton" type="Button" parent="MarginContainer/TabContainer/Coin/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$1200"
+
+[node name="Character" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_tab_index = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Character"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="SamuraiContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Character/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="SamuraiLabel" type="Label" parent="MarginContainer/TabContainer/Character/VBoxContainer/SamuraiContainer"]
+layout_mode = 2
+text = "Samurai"
+
+[node name="SamuraiDescriptionLabel" type="Label" parent="MarginContainer/TabContainer/Character/VBoxContainer/SamuraiContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="SamuraiMoneyButton" type="Button" parent="MarginContainer/TabContainer/Character/VBoxContainer/SamuraiContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$75"
+
+[node name="SwordsmanContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Character/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="SwordsmanLabel" type="Label" parent="MarginContainer/TabContainer/Character/VBoxContainer/SwordsmanContainer"]
+layout_mode = 2
+text = "Swordsman"
+
+[node name="SwordsmanDescriptionLabel" type="Label" parent="MarginContainer/TabContainer/Character/VBoxContainer/SwordsmanContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="SwordsmanMoneyButton" type="Button" parent="MarginContainer/TabContainer/Character/VBoxContainer/SwordsmanContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$150"
+
+[node name="CyborgContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Character/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="CyborgLabel" type="Label" parent="MarginContainer/TabContainer/Character/VBoxContainer/CyborgContainer"]
+layout_mode = 2
+text = "Cyborg"
+
+[node name="CyborgDescriptionLabel" type="Label" parent="MarginContainer/TabContainer/Character/VBoxContainer/CyborgContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CyborgMoneyButton" type="Button" parent="MarginContainer/TabContainer/Character/VBoxContainer/CyborgContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$300"
+
+[node name="DudeContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Character/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 2
+
+[node name="DudeLabel" type="Label" parent="MarginContainer/TabContainer/Character/VBoxContainer/DudeContainer"]
+layout_mode = 2
+text = "The Dude"
+
+[node name="DudeDescriptionLabel" type="Label" parent="MarginContainer/TabContainer/Character/VBoxContainer/DudeContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="DudeMoneyButton" type="Button" parent="MarginContainer/TabContainer/Character/VBoxContainer/DudeContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$1000"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_pe1n7")

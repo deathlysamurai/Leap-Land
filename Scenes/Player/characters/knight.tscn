@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://din6qxqag2jpy"]
+
+[ext_resource type="PackedScene" uid="uid://kkmdtpgfoi76" path="res://Scenes/Player/player.tscn" id="1_wggnq"]
+[ext_resource type="SpriteFrames" uid="uid://feepf3jyapth" path="res://resources/SpriteFrames/knight.tres" id="2_2xnxo"]
+
+[node name="Player" instance=ExtResource("1_wggnq")]
+BASE_SPEED = 50.0
+
+[node name="PlayerSprite" parent="." index="0"]
+sprite_frames = ExtResource("2_2xnxo")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(1, -4)
+
+[node name="CollisionShape2D" parent="PickupArea2D" index="0"]
+position = Vector2(1, -4)
+
+[node name="CollisionShape2D" parent="HazardArea2D" index="0"]
+position = Vector2(1, -4)
+
+[node name="CollisionShape2D" parent="ShopArea2D" index="0"]
+position = Vector2(1, -4)

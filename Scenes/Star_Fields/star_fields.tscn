@@ -1,0 +1,2596 @@
+[gd_scene load_steps=33 format=4 uid="uid://df4i8y8lclidu"]
+
+[ext_resource type="PackedScene" uid="uid://c44nn4n0sab58" path="res://Scenes/ui/hud.tscn" id="1_502ib"]
+[ext_resource type="PackedScene" uid="uid://dusoym23f81t6" path="res://Scenes/manager/game_manager.tscn" id="2_gih1a"]
+[ext_resource type="PackedScene" uid="uid://btxwu61k72wec" path="res://Scenes/manager/inventory_manager.tscn" id="3_yd3pw"]
+[ext_resource type="PackedScene" uid="uid://crg88khg6pou5" path="res://Scenes/manager/upgrade_manager.tscn" id="4_34diu"]
+[ext_resource type="Resource" uid="uid://dlisei5wjrpv6" path="res://resources/coins/coin.tres" id="5_ynbs2"]
+[ext_resource type="PackedScene" uid="uid://hinpd6jnwxnc" path="res://Scenes/manager/level_manager.tscn" id="6_kvqql"]
+[ext_resource type="PackedScene" uid="uid://cru3vpmep0uq0" path="res://Scenes/Cat_Playground/cat_playground.tscn" id="7_g3rmt"]
+[ext_resource type="PackedScene" uid="uid://dpup3uh5ra0v2" path="res://Objects/Camera/game_camera.tscn" id="8_7klue"]
+[ext_resource type="Texture2D" uid="uid://q7m6ltsww05v" path="res://assets/Stringstar Fields/tileset.png" id="9_i6hig"]
+[ext_resource type="Texture2D" uid="uid://bqxwbj7aw045h" path="res://assets/Stringstar Fields/background_0.png" id="10_mqlfp"]
+[ext_resource type="Texture2D" uid="uid://cocfylp1ptj8d" path="res://assets/Stringstar Fields/background_1.png" id="11_6rhq1"]
+[ext_resource type="Texture2D" uid="uid://hvljij6df350" path="res://assets/Stringstar Fields/background_2.png" id="12_u2yol"]
+[ext_resource type="PackedScene" uid="uid://drrgt1yo123m" path="res://Scenes/Shop/shop.tscn" id="13_c2jno"]
+[ext_resource type="PackedScene" uid="uid://c083withi7bi7" path="res://Objects/Treat/treat.tscn" id="14_xe1v1"]
+[ext_resource type="Texture2D" uid="uid://tyn5ibqh7mfw" path="res://assets/FREE_Cat 2D Pixel Art/Sprites/IDLE.png" id="15_m67i6"]
+[ext_resource type="Texture2D" uid="uid://kuvgp8u3rpmv" path="res://assets/Fantasy Swamp Forest/Free/Terrain_and_Props.png" id="16_028sv"]
+[ext_resource type="PackedScene" uid="uid://vr0pv42p1aof" path="res://Objects/Coins/coin_spawner.tscn" id="17_modpa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_477p4"]
+texture = ExtResource("9_i6hig")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:0/0 = 0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:0/0 = 0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:0/0 = 0
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:1/0 = 0
+12:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:1/0 = 0
+13:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:1/0 = 0
+14:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:1/0 = 0
+15:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:1/0 = 0
+16:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:2/0 = 0
+11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:2/0 = 0
+12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:2/0 = 0
+13:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:2/0 = 0
+14:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:2/0 = 0
+15:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:2/0 = 0
+16:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:2/0 = 0
+17:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:3/0 = 0
+14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:3/0 = 0
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:3/0 = 0
+16:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:3/0 = 0
+17:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:4/0 = 0
+11:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:4/0 = 0
+12:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:4/0 = 0
+13:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:4/0 = 0
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:4/0 = 0
+15:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:4/0 = 0
+16:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:5/0 = 0
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:5/0 = 0
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:5/0 = 0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:5/0 = 0
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:5/0 = 0
+15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:5/0 = 0
+16:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:6/0 = 0
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:6/0 = 0
+12:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:6/0 = 0
+13:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:6/0 = 0
+14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:6/0 = 0
+15:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:6/0 = 0
+16:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:7/0 = 0
+9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:7/0 = 0
+13:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:7/0 = 0
+14:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:7/0 = 0
+15:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:8/0 = 0
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:8/0 = 0
+2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:8/0 = 0
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:8/0 = 0
+5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:8/0 = 0
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:8/0 = 0
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:8/0 = 0
+9:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:8/0 = 0
+10:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:8/0 = 0
+11:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:8/0 = 0
+12:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:8/0 = 0
+13:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:8/0 = 0
+14:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:8/0 = 0
+15:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:8/0 = 0
+16:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:8/0 = 0
+17:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:9/0 = 0
+4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:9/0 = 0
+5:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:9/0 = 0
+6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:9/0 = 0
+7:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:9/0 = 0
+8:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:9/0 = 0
+9:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:9/0 = 0
+10:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:9/0 = 0
+11:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:9/0 = 0
+12:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:9/0 = 0
+13:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+14:9/0 = 0
+14:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:9/0 = 0
+15:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:9/0 = 0
+16:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:9/0 = 0
+17:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:10/0 = 0
+0:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:10/0 = 0
+1:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:10/0 = 0
+2:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:10/0 = 0
+3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:10/0 = 0
+4:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:10/0 = 0
+5:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:10/0 = 0
+6:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:10/0 = 0
+7:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:10/0 = 0
+8:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:10/0 = 0
+9:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+16:7/0 = 0
+16:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+17:10/0 = 0
+17:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_bf5h3"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_477p4")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgsd1"]
+atlas = ExtResource("15_m67i6")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og35o"]
+atlas = ExtResource("15_m67i6")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxiop"]
+atlas = ExtResource("15_m67i6")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej765"]
+atlas = ExtResource("15_m67i6")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dn45e"]
+atlas = ExtResource("15_m67i6")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13kgn"]
+atlas = ExtResource("15_m67i6")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b6r4"]
+atlas = ExtResource("15_m67i6")
+region = Rect2(480, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66n17"]
+atlas = ExtResource("15_m67i6")
+region = Rect2(560, 0, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5arqo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgsd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og35o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxiop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ej765")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dn45e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13kgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b6r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66n17")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_acx5t"]
+texture = ExtResource("9_i6hig")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.809364, 8, 8, 1.61873, 8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 1.25901, -2.78781, 2.33816, 1.16908, 8, -8, 8)
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -5.30584, 5.57562, -5.12598, -2.1583, 2.42809, -3.77703, 3.50724, -8, 8, -8, 8, 8)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0.0899277, -8, 1.16908, -0.179857, 8, 6.29506, 8, 8, -8, 8)
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+9:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2oen0"]
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_acx5t")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lucxe"]
+texture = ExtResource("16_028sv")
+0:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+11:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+11:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+17:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+18:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+17:3/0 = 0
+18:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+18:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+18:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+6:7/0 = 0
+9:7/0 = 0
+14:7/0 = 0
+17:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+5:9/0 = 0
+9:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+19:9/0 = 0
+0:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+0:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+0:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+0:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+13:17/0 = 0
+14:17/0 = 0
+9:18/0 = 0
+10:18/0 = 0
+11:18/0 = 0
+12:18/0 = 0
+13:18/0 = 0
+14:18/0 = 0
+15:18/0 = 0
+16:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+8:19/0 = 0
+9:19/0 = 0
+10:19/0 = 0
+11:19/0 = 0
+12:19/0 = 0
+13:19/0 = 0
+14:19/0 = 0
+15:19/0 = 0
+16:19/0 = 0
+17:19/0 = 0
+18:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+6:20/0 = 0
+7:20/0 = 0
+8:20/0 = 0
+9:20/0 = 0
+10:20/0 = 0
+11:20/0 = 0
+12:20/0 = 0
+13:20/0 = 0
+14:20/0 = 0
+15:20/0 = 0
+16:20/0 = 0
+17:20/0 = 0
+18:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+8:21/0 = 0
+9:21/0 = 0
+10:21/0 = 0
+11:21/0 = 0
+12:21/0 = 0
+13:21/0 = 0
+14:21/0 = 0
+15:21/0 = 0
+16:21/0 = 0
+17:21/0 = 0
+18:21/0 = 0
+19:21/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+4:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+10:23/0 = 0
+11:23/0 = 0
+12:23/0 = 0
+13:23/0 = 0
+14:23/0 = 0
+2:24/0 = 0
+3:24/0 = 0
+4:24/0 = 0
+5:24/0 = 0
+9:24/0 = 0
+10:24/0 = 0
+11:24/0 = 0
+12:24/0 = 0
+13:24/0 = 0
+14:24/0 = 0
+15:24/0 = 0
+16:24/0 = 0
+2:25/0 = 0
+3:25/0 = 0
+4:25/0 = 0
+5:25/0 = 0
+8:25/0 = 0
+9:25/0 = 0
+10:25/0 = 0
+11:25/0 = 0
+12:25/0 = 0
+13:25/0 = 0
+14:25/0 = 0
+15:25/0 = 0
+16:25/0 = 0
+3:26/0 = 0
+4:26/0 = 0
+5:26/0 = 0
+7:26/0 = 0
+8:26/0 = 0
+9:26/0 = 0
+10:26/0 = 0
+11:26/0 = 0
+12:26/0 = 0
+13:26/0 = 0
+14:26/0 = 0
+15:26/0 = 0
+0:27/0 = 0
+1:27/0 = 0
+2:27/0 = 0
+3:27/0 = 0
+4:27/0 = 0
+5:27/0 = 0
+6:27/0 = 0
+7:27/0 = 0
+8:27/0 = 0
+9:27/0 = 0
+10:27/0 = 0
+11:27/0 = 0
+12:27/0 = 0
+13:27/0 = 0
+14:27/0 = 0
+15:27/0 = 0
+16:27/0 = 0
+0:28/0 = 0
+1:28/0 = 0
+2:28/0 = 0
+3:28/0 = 0
+4:28/0 = 0
+5:28/0 = 0
+6:28/0 = 0
+7:28/0 = 0
+8:28/0 = 0
+9:28/0 = 0
+10:28/0 = 0
+11:28/0 = 0
+12:28/0 = 0
+1:29/0 = 0
+2:29/0 = 0
+3:29/0 = 0
+4:29/0 = 0
+5:29/0 = 0
+6:29/0 = 0
+7:29/0 = 0
+8:29/0 = 0
+9:29/0 = 0
+10:29/0 = 0
+11:29/0 = 0
+12:29/0 = 0
+1:30/0 = 0
+2:30/0 = 0
+3:30/0 = 0
+4:30/0 = 0
+5:30/0 = 0
+6:30/0 = 0
+8:30/0 = 0
+9:30/0 = 0
+10:30/0 = 0
+12:30/0 = 0
+1:31/0 = 0
+2:31/0 = 0
+3:31/0 = 0
+4:31/0 = 0
+5:31/0 = 0
+6:31/0 = 0
+7:31/0 = 0
+8:31/0 = 0
+9:31/0 = 0
+10:31/0 = 0
+11:31/0 = 0
+12:31/0 = 0
+2:32/0 = 0
+3:32/0 = 0
+4:32/0 = 0
+5:32/0 = 0
+7:32/0 = 0
+8:32/0 = 0
+9:32/0 = 0
+10:32/0 = 0
+11:32/0 = 0
+12:32/0 = 0
+3:33/0 = 0
+4:33/0 = 0
+5:33/0 = 0
+8:33/0 = 0
+9:33/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ksgdk"]
+sources/0 = SubResource("TileSetAtlasSource_lucxe")
+
+[node name="StarFields" type="Node2D"]
+
+[node name="HUD" parent="." node_paths=PackedStringArray("inventory_manager") instance=ExtResource("1_502ib")]
+inventory_manager = NodePath("../InventoryManager")
+
+[node name="GameManager" parent="." node_paths=PackedStringArray("camera", "hud") instance=ExtResource("2_gih1a")]
+camera = NodePath("../GameCamera")
+hud = NodePath("../HUD")
+
+[node name="InventoryManager" parent="." instance=ExtResource("3_yd3pw")]
+
+[node name="UpgradeManager" parent="." node_paths=PackedStringArray("inventory_manager") groups=["upgrade_manager"] instance=ExtResource("4_34diu")]
+inventory_manager = NodePath("../InventoryManager")
+coin_object = ExtResource("5_ynbs2")
+
+[node name="LevelManager" parent="." node_paths=PackedStringArray("inventory_manager", "upgrade_manager") instance=ExtResource("6_kvqql")]
+inventory_manager = NodePath("../InventoryManager")
+upgrade_manager = NodePath("../UpgradeManager")
+cat_scene = ExtResource("7_g3rmt")
+
+[node name="GameCamera" parent="." instance=ExtResource("8_7klue")]
+visible = false
+position = Vector2(235, 511)
+offset = Vector2(0, -50)
+zoom = Vector2(2, 2)
+
+[node name="TileMap" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAB5/xMAAAAAAAoAAFB5/xQAAAAAAAkAAFB5/xUAAAAAAAkAAFB5/xYAAAAAAAkAAFB5/xcAAAAAAAkAAFB5/xgAAAAAAAkAAFB5/xkAAAAAAAkAAFB5/xoAAAAAAAkAAFB5/xsAAAAAAAkAAFB5/xwAAAAAAAkAAFB5/x0AAAAAAAkAAFB5/x4AAAAAAAkAAFB5/x8AAAAAAAkAAFB5/yAAAAAAAAkAAFB5/yEAAAAAAAkAAFB5/yIAAAAAAAkAAFB5/yMAAAAAAAkAAFB5/yQAAAAAAAkAAFB5/yUAAAAAAAkAAFB5/yYAAAAAAAkAAFB5/ycAAAAAAAkAAFB5/ygAAAAAAAkAAFB5/ykAAAAAAAkAAFB5/yoAAAAAAAkAAFB5/ysAAAAAAAkAAFB5/ywAAAAAAAkAAFB5/y0AAAAAAAkAAFB5/y4AAAAAAAkAAFCB/y4AAAAEAAgAAACB/y8AAAAEAAkAAACC/y4AAAAFAAgAAACC/y8AAAAFAAkAAACD/y4AAAAGAAgAAACD/y8AAAAGAAkAAACE/y4AAAAHAAgAAACE/y8AAAAHAAkAAACF/y4AAAAIAAgAAACF/y8AAAAIAAkAAAB//y8AAAAJAAkAAACA/y8AAAAKAAkAAAB9/y8AAAAHAAoAAAB+/y8AAAAAAAkAAAB7/y8AAAAAAAkAAAB8/y8AAAAGAAoAAAB5/y8AAAAAAAkAAAB6/y8AAAAAAAkAAACG/y8AAAAEAAkAAACH/y8AAAAEAAkAAACI/y8AAAAEAAkAAACJ/y8AAAAEAAkAAACK/y8AAAAEAAkAAACL/y8AAAAEAAkAAACM/y8AAAAEAAkAAACN/y8AAAAEAAkAAACO/y8AAAAEAAkAAACP/y8AAAAEAAkAAAB5/xIAAAAAAAkAAFB5/xEAAAAAAAkAAFB5/xAAAAAAAAkAAFB5/w8AAAAAAAkAAFB5/w4AAAAAAAkAAFB5/w0AAAAAAAkAAFB5/wwAAAAAAAkAAFB5/wsAAAAAAAkAAFB5/woAAAAAAAkAAFB5/wkAAAAAAAkAAFB5/wgAAAAAAAkAAFB5/wcAAAAAAAkAAFB5/wYAAAAAAAkAAFB5/wUAAAAAAAkAAFB5/wQAAAAAAAkAAFB5/wMAAAAAAAkAAFB5/wIAAAAAAAkAAFB5/wEAAAAAAAkAAFB5/wAAAAAAAAkAAFB5////AAAAAAkAAFB5//7/AAAAAAkAAFB5//3/AAAAAAkAAFB5//z/AAAAAAkAAFB5//v/AAAAAAkAAFB5//r/AAAAAAkAAFB5//n/AAAAAAkAAFB5//j/AAAAAAkAAFB5//f/AAAAAAkAAFB5//b/AAAAAAkAAFB5//X/AAAAAAkAAFB5//T/AAAAAAkAAFB5//P/AAAAAAkAAFB5//L/AAAAAAkAAFB5//H/AAAAAAkAAFB5//D/AAAAAAkAAFB5/+//AAAAAAkAAFB5/+7/AAAAAAkAAFB5/+3/AAAAAAkAAFCW/ysAAAAAAAUAAACW/ywAAAAAAAYAAACW/y0AAAAAAAcAAACW/y4AAAAAAAgAAACW/y8AAAAAAAkAAACX/ysAAAABAAUAAACX/ywAAAABAAYAAACX/y0AAAABAAcAAACX/y4AAAABAAgAAACX/y8AAAABAAkAAACY/ysAAAACAAUAAACY/ywAAAACAAYAAACY/y0AAAACAAcAAACY/y4AAAACAAgAAACY/y8AAAACAAkAAACZ/ysAAAADAAUAAACZ/ywAAAADAAYAAACZ/y0AAAADAAcAAACZ/y4AAAADAAgAAACZ/y8AAAADAAkAAACV/y8AAAAEAAkAAACU/y8AAAAEAAkAAACT/y8AAAAEAAkAAACS/y8AAAAEAAkAAACR/y8AAAAEAAkAAACQ/y8AAAAEAAkAAACa/y8AAAAEAAkAAACb/y8AAAAEAAkAAACc/y8AAAAEAAkAAACd/y8AAAAEAAkAAACe/y8AAAAEAAkAAACf/y8AAAAEAAkAAACg/y8AAAAEAAkAAACh/y8AAAAEAAkAAACi/y8AAAAEAAkAAACj/y8AAAAEAAkAAACj/zAAAAAEAAkAAACj/zEAAAAEAAkAAACk/zEAAAAEAAkAAACl/zEAAAAEAAkAAACm/zEAAAAEAAkAAACn/zEAAAAEAAkAAACo/zEAAAAEAAkAAACp/zEAAAAEAAkAAACq/zEAAAAEAAkAAACr/zEAAAAEAAkAAACs/zEAAAAEAAkAAACt/zEAAAAEAAkAAACu/zEAAAAEAAkAAACv/zEAAAAEAAkAAACw/zEAAAAEAAkAAACx/zEAAAAEAAkAAACy/zEAAAAEAAkAAACz/zEAAAAEAAkAAAC0/zEAAAAEAAkAAAC1/zEAAAAEAAkAAAC2/zEAAAAEAAkAAAC3/zEAAAAEAAkAAAC4/zEAAAAEAAkAAAC5/zEAAAAEAAkAAAC6/zEAAAAEAAkAAAC7/zEAAAAEAAkAAAC8/zEAAAAEAAkAAAC9/zEAAAAEAAkAAAC+/zEAAAAEAAkAAAC//zEAAAAEAAkAAADA/zEAAAAEAAkAAADB/zEAAAAEAAkAAADC/zEAAAAEAAkAAADD/zEAAAAEAAkAAADE/zEAAAAEAAkAAADF/zEAAAAEAAkAAADG/zEAAAAEAAkAAADH/zEAAAAEAAkAAADI/zEAAAAEAAkAAADJ/zEAAAAEAAkAAADK/zEAAAAEAAkAAADL/zEAAAAEAAkAAADM/zEAAAAEAAkAAADN/zEAAAAEAAkAAADO/zEAAAAEAAkAAADP/zEAAAAEAAkAAADQ/zEAAAAEAAkAAADR/zEAAAAEAAkAAADS/zEAAAAEAAkAAADT/zEAAAAEAAkAAADU/zEAAAAEAAkAAADV/zEAAAAEAAkAAADW/zEAAAAEAAkAAADX/zEAAAAEAAkAAADY/zEAAAAEAAkAAADZ/zEAAAAEAAkAAADa/zEAAAAEAAkAAADb/zEAAAAEAAkAAADc/zEAAAAEAAkAAADd/zEAAAAEAAkAAADe/zEAAAAEAAkAAADf/zEAAAAEAAkAAADg/zEAAAAEAAkAAADh/zEAAAAEAAkAAADi/zEAAAAEAAkAAADj/zEAAAAEAAkAAADk/zEAAAAEAAkAAADl/zEAAAAEAAkAAADm/zEAAAAEAAkAAADn/zEAAAAEAAkAAADo/zEAAAAEAAkAAADp/zEAAAAEAAkAAADq/zEAAAAEAAkAAADr/zEAAAAEAAkAAADs/zEAAAAEAAkAAADt/zEAAAAEAAkAAADu/zEAAAAEAAkAAADv/zEAAAAEAAkAAADw/zEAAAAEAAkAAADx/zEAAAAEAAkAAADy/zEAAAAEAAkAAADy/zAAAAAEAAkAAADy/y8AAAAEAAkAAADz/y8AAAAEAAkAAAD0/y8AAAAEAAkAAAD1/y8AAAAEAAkAAAD2/y8AAAAEAAkAAAD3/y8AAAAEAAkAAAD4/y8AAAAEAAkAAAD5/y8AAAAEAAkAAAD6/y8AAAAEAAkAAAD7/y8AAAAEAAkAAAD8/y8AAAAEAAkAAAD9/y8AAAAEAAkAAAD+/y8AAAAEAAkAAAD//y8AAAAEAAkAAAAAAC8AAAAEAAkAAAABAC8AAAAEAAkAAAACAC8AAAAEAAkAAAADAC8AAAAEAAkAAAAEAC8AAAAEAAkAAAAFAC8AAAAEAAkAAAAGAC8AAAAEAAkAAAAHAC8AAAAEAAkAAAAIAC8AAAAEAAkAAAAJAC8AAAAEAAkAAAAKAC8AAAAEAAkAAAALAC8AAAAEAAkAAAAMAC8AAAAEAAkAAAANAC8AAAAEAAkAAAAOAC8AAAAGAAkAAAAPAC8AAAAHAAkAAAAQAC8AAAAEAAkAAAARAC8AAAAEAAkAAAASAC8AAAAEAAkAAAATAC8AAAAEAAkAAAAUAC8AAAAEAAkAAAAVAC8AAAAEAAkAAAAWAC8AAAAEAAkAAAAXAC8AAAAEAAkAAAAYAC8AAAAGAAkAAAAZAC8AAAAHAAkAAAAaAC8AAAAEAAkAAAAbAC8AAAAEAAkAAAAcAC8AAAAEAAkAAAAdAC8AAAAEAAkAAAAeAC8AAAAEAAkAAAAfAC8AAAAEAAkAAAAgAC8AAAAEAAkAAAAhAC8AAAAEAAkAAAAiAC8AAAAEAAkAAAAjAC8AAAAEAAkAAAAkAC8AAAAEAAkAAAAlAC8AAAAEAAkAAAAmACgAAAALAAIAAAAmACkAAAALAAMAAAAmACoAAAALAAQAAAAmAC4AAAALAAgAAAAmAC8AAAALAAkAAAAnACcAAAAMAAEAAAAnACgAAAAMAAIAAAAnACkAAAAMAAMAAAAnACoAAAAMAAQAAAAnACsAAAAMAAUAAAAnACwAAAAMAAYAAAAnAC4AAAAMAAgAAAAnAC8AAAAMAAkAAAAoACYAAAANAAAAAAAoACcAAAANAAEAAAAoACgAAAANAAIAAAAoACkAAAANAAMAAAAoACoAAAANAAQAAAAoACsAAAANAAUAAAAoACwAAAANAAYAAAAoAC0AAAANAAcAAAAoAC4AAAANAAgAAAAoAC8AAAANAAkAAAApACYAAAAOAAAAAAApACcAAAAOAAEAAAApACgAAAAOAAIAAAApACkAAAAOAAMAAAApACoAAAAOAAQAAAApACsAAAAOAAUAAAApACwAAAAOAAYAAAApAC0AAAAOAAcAAAApAC4AAAAOAAgAAAApAC8AAAAOAAkAAAAqACYAAAAPAAAAAAAqACcAAAAPAAEAAAAqACgAAAAPAAIAAAAqACkAAAAPAAMAAAAqACoAAAAPAAQAAAAqACsAAAAPAAUAAAAqACwAAAAPAAYAAAAqAC0AAAAPAAcAAAAqAC4AAAAPAAgAAAAqAC8AAAAPAAkAAAArACcAAAAQAAEAAAArACgAAAAQAAIAAAArACkAAAAQAAMAAAArACoAAAAQAAQAAAArACsAAAAQAAUAAAArACwAAAAQAAYAAAArAC0AAAAQAAcAAAArAC4AAAAQAAgAAAArAC8AAAAQAAkAAAAsACgAAAARAAIAAAAsACkAAAARAAMAAAAsAC4AAAARAAgAAAAsAC8AAAARAAkAAAAtAC8AAAAAAAkAAAAuAC8AAAABAAkAAAAvAC8AAAACAAkAAAAwAC8AAAADAAkAAAAxAC8AAAAAAAkAAAAyAC8AAAABAAkAAAAzAC8AAAACAAkAAAA0AC8AAAADAAkAAAA1AC8AAAAAAAkAAAA2AC8AAAABAAkAAAA3AC8AAAACAAkAAAA4AC8AAAADAAkAAAA5AC8AAAAAAAkAAAA6AC8AAAABAAkAAAA7AC8AAAACAAkAAAA8AC8AAAADAAkAAAA9AC8AAAAAAAkAAAA+AC8AAAABAAkAAAA/AC8AAAACAAkAAABAAC8AAAADAAkAAABBAC8AAAAAAAkAAABCAC8AAAAAAAkAAABDAC8AAAAAAAkAAABEAC8AAAAAAAkAAABFAC8AAAAAAAkAAABGAC8AAAAAAAkAAABHAC8AAAAAAAkAAABHADAAAAAAAAkAAABHADEAAAAAAAkAAABIADEAAAAAAAkAAABJADEAAAAAAAkAAABKADEAAAAAAAkAAABLADEAAAAAAAkAAABMADEAAAAAAAkAAABNADEAAAAAAAkAAABOADEAAAAAAAkAAABPADEAAAAAAAkAAABQADEAAAAAAAkAAABRADEAAAAAAAkAAABSADEAAAAAAAkAAABTADEAAAAAAAkAAABUADEAAAAAAAkAAABVADEAAAAAAAkAAABWADEAAAAAAAkAAABXADEAAAAAAAkAAABYADEAAAAAAAkAAABZADEAAAAAAAkAAABaADEAAAAAAAkAAABbADEAAAAAAAkAAABcADEAAAAAAAkAAABdADEAAAAAAAkAAABeADEAAAAAAAkAAABfADEAAAAAAAkAAABgADEAAAAAAAkAAABhADEAAAAAAAkAAABiADEAAAAAAAkAAABjADEAAAAAAAkAAABkADEAAAAAAAkAAABlADEAAAAAAAkAAABmADEAAAAAAAkAAABnADEAAAAAAAkAAABoADEAAAAAAAkAAABpADEAAAAAAAkAAABqADEAAAAAAAkAAABrADEAAAAAAAkAAABsADEAAAAAAAkAAABtADEAAAAAAAkAAABuADEAAAAAAAkAAABvADEAAAAAAAkAAABwADEAAAAAAAkAAABxADEAAAAAAAkAAAByADEAAAAAAAkAAABzADEAAAAAAAkAAAB0ADEAAAAAAAkAAAB1ADEAAAAAAAkAAAB2ADEAAAAAAAkAAAB3ADEAAAAAAAkAAAB4ADEAAAAAAAkAAAB5ADEAAAAAAAkAAAB6ADEAAAAAAAkAAAB7ADEAAAAAAAkAAAB8ADEAAAAAAAkAAAB9ADEAAAAAAAkAAAB+ADEAAAAAAAkAAAB/ADEAAAAAAAkAAACAADEAAAAAAAkAAACBADEAAAAAAAkAAACCADEAAAAAAAkAAACDADEAAAAAAAkAAACEADEAAAAAAAkAAACFADEAAAAAAAkAAACGADEAAAAAAAkAAACHADEAAAAAAAkAAACIADEAAAAAAAkAAACJADEAAAAAAAkAAACKADEAAAAAAAkAAACLADEAAAAAAAkAAACMADEAAAAAAAkAAACNADEAAAAAAAkAAACOADEAAAAAAAkAAACPADEAAAAAAAkAAACQADEAAAAAAAkAAACRADEAAAAAAAkAAACSADEAAAAAAAkAAACTADEAAAAAAAkAAACUADEAAAAAAAkAAACVADEAAAAAAAkAAACWADEAAAAAAAkAAACXADEAAAAAAAkAAACYADEAAAAAAAkAAACZADEAAAAAAAkAAACaADEAAAAAAAkAAACbADEAAAAAAAkAAACcADEAAAAAAAkAAACdADEAAAAAAAkAAACeADEAAAAAAAkAAACfADEAAAAAAAkAAACgADEAAAAAAAkAAAChADEAAAAAAAkAAACiADEAAAAAAAkAAACjADEAAAAAAAkAAACkADEAAAAAAAkAAAClADEAAAAAAAkAAACmADEAAAAAAAkAAACnADEAAAAAAAkAAACoADEAAAAAAAkAAACpADEAAAAAAAkAAACqADEAAAAAAAkAAACrADEAAAAAAAkAAACsADEAAAAAAAkAAACtADEAAAAAAAkAAACuADEAAAAAAAkAAACvADEAAAAAAAkAAACwADEAAAAAAAkAAACxADEAAAAAAAkAAACyADEAAAAAAAkAAACzADEAAAAAAAkAAAC0ADEAAAAAAAkAAAC1ADEAAAAAAAkAAAC2ADEAAAAAAAkAAAC3ADEAAAAAAAkAAAC4ADEAAAAAAAkAAAC5ADEAAAAAAAkAAAC6ADEAAAAAAAkAAAC7ADEAAAAAAAkAAAC8ADEAAAAAAAkAAAC9ADEAAAAAAAkAAAC+ADEAAAAAAAkAAAC/ADEAAAAAAAkAAADAADEAAAAAAAkAAADBADEAAAAAAAkAAADCADEAAAAAAAkAAADDADEAAAAAAAkAAADEADEAAAAAAAkAAADFADEAAAAAAAkAAADGADEAAAAAAAkAAADHADEAAAAAAAkAAADIADEAAAAAAAkAAADJADEAAAAAAAkAAADKADEAAAAAAAkAAADLADEAAAAAAAkAAADMADEAAAAAAAkAAADNADEAAAAAAAkAAADOADEAAAAAAAkAAADPADEAAAAAAAkAAADQADEAAAAAAAkAAADRADEAAAAAAAkAAADSADEAAAAAAAkAAADTADEAAAAAAAkAAADUADEAAAAAAAkAAADVADEAAAAAAAkAAADWADEAAAAAAAkAAADXADEAAAAAAAkAAADYADEAAAAAAAkAAADZADEAAAAAAAkAAADaADEAAAAAAAkAAADbADEAAAAAAAkAAADcADEAAAAAAAkAAADdADEAAAAAAAkAAADeADEAAAAAAAkAAADfADEAAAAAAAkAAADgADEAAAAAAAkAAADhADEAAAAAAAkAAADiADEAAAAAAAkAAADjADEAAAAAAAkAAADkADEAAAAAAAkAAADlADEAAAAAAAkAAADmADEAAAAAAAkAAADnADEAAAAAAAkAAADoADEAAAAAAAkAAADpADEAAAAAAAkAAADqADEAAAAAAAkAAADrADEAAAAAAAkAAADsADEAAAAAAAkAAADtADEAAAAAAAkAAADuADEAAAAAAAkAAADvADEAAAAAAAkAAADwADEAAAAAAAkAAADxADEAAAAAAAkAAADyADEAAAAAAAkAAADzADEAAAAAAAkAAAD0ADEAAAAAAAkAAAD1ADEAAAAAAAkAAAD2ADEAAAAAAAkAAAD3ADEAAAAAAAkAAAD4ADEAAAAAAAkAAAD5ADEAAAAAAAkAAAD6ADEAAAAAAAkAAAD7ADEAAAAAAAkAAAD8ADEAAAAAAAkAAAD9ADEAAAAAAAkAAAD+ADEAAAAAAAkAAAD/ADEAAAAAAAkAAAAAATEAAAAAAAkAAAABATEAAAAAAAkAAAACATEAAAAAAAkAAAADATEAAAAAAAkAAAAEATEAAAAAAAkAAAAFATEAAAAAAAkAAAAGATEAAAAAAAkAAAAHATEAAAAAAAkAAAAIATEAAAAAAAkAAAAIATAAAAAAAAkAAAAIAS8AAAAAAAkAAAAJAS8AAAAAAAkAAAAKAS8AAAAAAAkAAAALAS8AAAAAAAkAAAAMAS8AAAAAAAkAAAANAS8AAAAAAAkAAAAOAS8AAAAAAAkAAAAPAS8AAAAAAAkAAAAQAS8AAAAAAAkAAAARAS8AAAAAAAkAAAASAS8AAAAAAAkAAAATAS8AAAAAAAkAAAATAS4AAAAAAAkAAAATAS0AAAAAAAkAAAATASwAAAAAAAkAAAATASsAAAAAAAkAAAATASoAAAAAAAkAAAATASkAAAAAAAkAAAATASgAAAAAAAkAAAATAScAAAAAAAkAAAATASYAAAAAAAkAAAATASUAAAAAAAkAAAATASQAAAAAAAkAAAATASMAAAAAAAkAAAATASIAAAAAAAkAAAATASEAAAAAAAkAAAATASAAAAAAAAkAAAATAR8AAAAAAAkAAAATAR4AAAAAAAkAAAATAR0AAAAAAAkAAAATARwAAAAAAAkAAAATARsAAAAAAAkAAAATARoAAAAAAAkAAAATARkAAAAAAAkAAAATARgAAAAAAAkAAAATARcAAAAAAAkAAAAUARcAAAABAAkAAAAVARcAAAACAAkAAAAWARcAAAADAAkAAAAXARcAAAAAAAkAAAAYARcAAAAAAAkAAAAZARcAAAAAAAkAAAAaARcAAAAAAAkAAAATARMAAAAAAAUAAAATARQAAAAAAAYAAAATARUAAAAAAAcAAAATARYAAAAAAAgAAAAUARMAAAABAAUAAAAUARQAAAABAAYAAAAUARUAAAABAAcAAAAUARYAAAABAAgAAAAVARMAAAACAAUAAAAVARQAAAACAAYAAAAVARUAAAACAAcAAAAVARYAAAACAAgAAAAWARMAAAADAAUAAAAWARQAAAADAAYAAAAWARUAAAADAAcAAAAWARYAAAADAAgAAAAbARcAAAAAAAkAAAAcARcAAAAAAAkAAAAdARcAAAAAAAkAAAAeARcAAAAAAAkAAAAfARcAAAAAAAkAAAAgARcAAAAAAAkAAAAhARcAAAAAAAkAAAAiARcAAAAAAAkAAAAjARcAAAAAAAkAAAAjARYAAAAAAAkAAAAjARUAAAAAAAkAAAAjARQAAAAAAAkAAAAjARMAAAAAAAkAAAAjARIAAAAAAAkAAAAjAREAAAAAAAkAAAAjARAAAAAAAAkAAAAjAQ8AAAAAAAkAAAAjAQ4AAAAAAAkAAAAjAQ0AAAAAAAkAAAAjAQwAAAAAAAkAAAAjAQsAAAAAAAkAAAAjAQoAAAAAAAkAAAAjAQkAAAAAAAkAAAAjAQgAAAAAAAkAAAAjAQcAAAAAAAkAAAAjAQYAAAAAAAkAAAAjAQUAAAAAAAkAAAAjAQQAAAAAAAkAAAAjAQMAAAAAAAkAAAAjAQIAAAAAAAkAAAAjAQEAAAAAAAkAAAAjAQAAAAAAAAkAAAAjAf//AAAAAAkAAAAjAf7/AAAAAAkAAAAjAf3/AAAAAAkAAAAjAfz/AAAAAAkAAAAjAfv/AAAAAAkAAAAjAfr/AAAAAAkAAAAjAfn/AAAAAAkAAAAjAfj/AAAAAAkAAAAjAff/AAAAAAkAAAAjAfb/AAAAAAkAAAAjAfX/AAAAAAkAAAAjAfT/AAAAAAkAAAAjAfP/AAAAAAkAAAAjAfL/AAAAAAkAAAAjAfH/AAAAAAkAAAAjAfD/AAAAAAkAAAAjAe//AAAAAAkAAAAjAe7/AAAAAAkAAAAjAe3/AAAAAAkAAAAjAez/AAAAAAkAAAAjAev/AAAAAAkAAAA=")
+tile_set = SubResource("TileSet_bf5h3")
+
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="DeepBackground" type="Sprite2D" parent="Backgrounds"]
+z_index = -3
+position = Vector2(632, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("10_mqlfp")
+
+[node name="Background" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(632, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("11_6rhq1")
+
+[node name="Foreground" type="Sprite2D" parent="Backgrounds"]
+z_index = -1
+position = Vector2(632, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("12_u2yol")
+
+[node name="DeepBackground2" type="Sprite2D" parent="Backgrounds"]
+z_index = -3
+position = Vector2(-1608.25, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("10_mqlfp")
+
+[node name="Background2" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(-1608.25, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("11_6rhq1")
+
+[node name="Foreground2" type="Sprite2D" parent="Backgrounds"]
+z_index = -1
+position = Vector2(-1608.25, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("12_u2yol")
+
+[node name="DeepBackground3" type="Sprite2D" parent="Backgrounds"]
+z_index = -3
+position = Vector2(2879.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("10_mqlfp")
+
+[node name="Background3" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(2879.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("11_6rhq1")
+
+[node name="Foreground3" type="Sprite2D" parent="Backgrounds"]
+z_index = -1
+position = Vector2(2879.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("12_u2yol")
+
+[node name="DeepBackground4" type="Sprite2D" parent="Backgrounds"]
+z_index = -3
+position = Vector2(7368, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("10_mqlfp")
+
+[node name="Background4" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(7368, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("11_6rhq1")
+
+[node name="Foreground4" type="Sprite2D" parent="Backgrounds"]
+z_index = -1
+position = Vector2(7368, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("12_u2yol")
+
+[node name="DeepBackground5" type="Sprite2D" parent="Backgrounds"]
+z_index = -3
+position = Vector2(5127.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("10_mqlfp")
+
+[node name="Background5" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(5127.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("11_6rhq1")
+
+[node name="Foreground5" type="Sprite2D" parent="Backgrounds"]
+z_index = -1
+position = Vector2(5127.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("12_u2yol")
+
+[node name="DeepBackground6" type="Sprite2D" parent="Backgrounds"]
+z_index = -3
+position = Vector2(9615.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("10_mqlfp")
+
+[node name="Background6" type="Sprite2D" parent="Backgrounds"]
+z_index = -2
+position = Vector2(9615.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("11_6rhq1")
+
+[node name="Foreground6" type="Sprite2D" parent="Backgrounds"]
+z_index = -1
+position = Vector2(9615.75, 354)
+scale = Vector2(7.8316, 7.8316)
+texture = ExtResource("12_u2yol")
+
+[node name="Shop" parent="." instance=ExtResource("13_c2jno")]
+z_index = -4
+position = Vector2(-1880, 704)
+
+[node name="Shop2" parent="." instance=ExtResource("13_c2jno")]
+z_index = -4
+position = Vector2(288, 704)
+
+[node name="Treat" parent="." instance=ExtResource("14_xe1v1")]
+position = Vector2(4576, 344)
+
+[node name="Meowser" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(-1840, 655)
+sprite_frames = SubResource("SpriteFrames_5arqo")
+animation = &"idle"
+flip_h = true
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-1664, 656)
+
+[node name="HazardTileMap" type="TileMapLayer" parent="."]
+z_index = 2
+tile_map_data = PackedByteArray("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AADv/y8AAAAEAAMAAADv/zAAAAAEAAQAAADw/y8AAAADAAMAAADw/zAAAAADAAQAAADx/y8AAAAEAAMAAADx/zAAAAAEAAQAAABIAC8AAAADAAMAAABIADAAAAADAAQAAABJAC8AAAAEAAMAAABJADAAAAAEAAQAAABKAC8AAAADAAMAAABKADAAAAADAAQAAABLAC8AAAAEAAMAAABLADAAAAAEAAQAAABMAC8AAAADAAMAAABMADAAAAADAAQAAABNAC8AAAAEAAMAAABNADAAAAAEAAQAAABOAC8AAAADAAMAAABOADAAAAADAAQAAABPAC8AAAAEAAMAAABPADAAAAAEAAQAAABQAC8AAAADAAMAAABQADAAAAADAAQAAABRAC8AAAAEAAMAAABRADAAAAAEAAQAAABSAC8AAAADAAMAAABSADAAAAADAAQAAABTAC8AAAAEAAMAAABTADAAAAAEAAQAAABUAC8AAAADAAMAAABUADAAAAADAAQAAABVAC8AAAAEAAMAAABVADAAAAAEAAQAAABWAC8AAAADAAMAAABWADAAAAADAAQAAABXAC8AAAAEAAMAAABXADAAAAAEAAQAAABYAC8AAAADAAMAAABYADAAAAADAAQAAABZAC8AAAAEAAMAAABZADAAAAAEAAQAAABaAC8AAAADAAMAAABaADAAAAADAAQAAABbAC8AAAAEAAMAAABbADAAAAAEAAQAAABcAC8AAAADAAMAAABcADAAAAADAAQAAABdAC8AAAAEAAMAAABdADAAAAAEAAQAAABeAC8AAAADAAMAAABeADAAAAADAAQAAABfAC8AAAAEAAMAAABfADAAAAAEAAQAAABgAC8AAAADAAMAAABgADAAAAADAAQAAABhAC8AAAAEAAMAAABhADAAAAAEAAQAAABiAC8AAAADAAMAAABiADAAAAADAAQAAABjAC8AAAAEAAMAAABjADAAAAAEAAQAAABkAC8AAAADAAMAAABkADAAAAADAAQAAABlAC8AAAAEAAMAAABlADAAAAAEAAQAAABmAC8AAAADAAMAAABmADAAAAADAAQAAABnAC8AAAAEAAMAAABnADAAAAAEAAQAAABoAC8AAAADAAMAAABoADAAAAADAAQAAABpAC8AAAAEAAMAAABpADAAAAAEAAQAAABqAC8AAAADAAMAAABqADAAAAADAAQAAABrAC8AAAAEAAMAAABrADAAAAAEAAQAAABsAC8AAAADAAMAAABsADAAAAADAAQAAABtAC8AAAAEAAMAAABtADAAAAAEAAQAAABuAC8AAAADAAMAAABuADAAAAADAAQAAABvAC8AAAAEAAMAAABvADAAAAAEAAQAAABwAC8AAAADAAMAAABwADAAAAADAAQAAABxAC8AAAAEAAMAAABxADAAAAAEAAQAAAByAC8AAAADAAMAAAByADAAAAADAAQAAABzAC8AAAAEAAMAAABzADAAAAAEAAQAAAB0AC8AAAADAAMAAAB0ADAAAAADAAQAAAB1AC8AAAAEAAMAAAB1ADAAAAAEAAQAAAB2AC8AAAADAAMAAAB2ADAAAAADAAQAAAB3AC8AAAAEAAMAAAB3ADAAAAAEAAQAAAB4AC8AAAADAAMAAAB4ADAAAAADAAQAAAB5AC8AAAAEAAMAAAB5ADAAAAAEAAQAAAB6AC8AAAADAAMAAAB6ADAAAAADAAQAAAB7AC8AAAAEAAMAAAB7ADAAAAAEAAQAAAB8AC8AAAADAAMAAAB8ADAAAAADAAQAAAB9AC8AAAAEAAMAAAB9ADAAAAAEAAQAAAB+AC8AAAADAAMAAAB+ADAAAAADAAQAAAB/AC8AAAAEAAMAAAB/ADAAAAAEAAQAAACAAC8AAAADAAMAAACAADAAAAADAAQAAACBAC8AAAAEAAMAAACBADAAAAAEAAQAAACCAC8AAAADAAMAAACCADAAAAADAAQAAACDAC8AAAAEAAMAAACDADAAAAAEAAQAAACEAC8AAAADAAMAAACEADAAAAADAAQAAACFAC8AAAAEAAMAAACFADAAAAAEAAQAAACGAC8AAAADAAMAAACGADAAAAADAAQAAACHAC8AAAAEAAMAAACHADAAAAAEAAQAAACIAC8AAAADAAMAAACIADAAAAADAAQAAACJAC8AAAAEAAMAAACJADAAAAAEAAQAAACKAC8AAAADAAMAAACKADAAAAADAAQAAACLAC8AAAAEAAMAAACLADAAAAAEAAQAAACMAC8AAAADAAMAAACMADAAAAADAAQAAACNAC8AAAAEAAMAAACNADAAAAAEAAQAAACOAC8AAAADAAMAAACOADAAAAADAAQAAACPAC8AAAAEAAMAAACPADAAAAAEAAQAAACQAC8AAAADAAMAAACQADAAAAADAAQAAACRAC8AAAAEAAMAAACRADAAAAAEAAQAAACSAC8AAAADAAMAAACSADAAAAADAAQAAACTAC8AAAAEAAMAAACTADAAAAAEAAQAAACUAC8AAAADAAMAAACUADAAAAADAAQAAACVAC8AAAAEAAMAAACVADAAAAAEAAQAAACWAC8AAAADAAMAAACWADAAAAADAAQAAACXAC8AAAAEAAMAAACXADAAAAAEAAQAAACYAC8AAAADAAMAAACYADAAAAADAAQAAACZAC8AAAAEAAMAAACZADAAAAAEAAQAAACaAC8AAAADAAMAAACaADAAAAADAAQAAACbAC8AAAAEAAMAAACbADAAAAAEAAQAAACcAC8AAAADAAMAAACcADAAAAADAAQAAACdAC8AAAAEAAMAAACdADAAAAAEAAQAAACeAC8AAAADAAMAAACeADAAAAADAAQAAACfAC8AAAAEAAMAAACfADAAAAAEAAQAAACgAC8AAAADAAMAAACgADAAAAADAAQAAAChAC8AAAAEAAMAAAChADAAAAAEAAQAAACiAC8AAAADAAMAAACiADAAAAADAAQAAACjAC8AAAAEAAMAAACjADAAAAAEAAQAAACkAC8AAAADAAMAAACkADAAAAADAAQAAAClAC8AAAAEAAMAAAClADAAAAAEAAQAAACmAC8AAAADAAMAAACmADAAAAADAAQAAACnAC8AAAAEAAMAAACnADAAAAAEAAQAAACoAC8AAAADAAMAAACoADAAAAADAAQAAACpAC8AAAAEAAMAAACpADAAAAAEAAQAAACqAC8AAAADAAMAAACqADAAAAADAAQAAACrAC8AAAAEAAMAAACrADAAAAAEAAQAAACsAC8AAAADAAMAAACsADAAAAADAAQAAACtAC8AAAAEAAMAAACtADAAAAAEAAQAAACuAC8AAAADAAMAAACuADAAAAADAAQAAACvAC8AAAAEAAMAAACvADAAAAAEAAQAAACwAC8AAAADAAMAAACwADAAAAADAAQAAACxAC8AAAAEAAMAAACxADAAAAAEAAQAAACyAC8AAAADAAMAAACyADAAAAADAAQAAACzAC8AAAAEAAMAAACzADAAAAAEAAQAAAC0AC8AAAADAAMAAAC0ADAAAAADAAQAAAC1AC8AAAAEAAMAAAC1ADAAAAAEAAQAAAC2AC8AAAADAAMAAAC2ADAAAAADAAQAAAC3AC8AAAAEAAMAAAC3ADAAAAAEAAQAAAC4AC8AAAADAAMAAAC4ADAAAAADAAQAAAC5AC8AAAAEAAMAAAC5ADAAAAAEAAQAAAC6AC8AAAADAAMAAAC6ADAAAAADAAQAAAC7AC8AAAAEAAMAAAC7ADAAAAAEAAQAAAC8AC8AAAADAAMAAAC8ADAAAAADAAQAAAC9AC8AAAAEAAMAAAC9ADAAAAAEAAQAAAC+AC8AAAADAAMAAAC+ADAAAAADAAQAAAC/AC8AAAAEAAMAAAC/ADAAAAAEAAQAAADAAC8AAAADAAMAAADAADAAAAADAAQAAADBAC8AAAAEAAMAAADBADAAAAAEAAQAAADCAC8AAAADAAMAAADCADAAAAADAAQAAADDAC8AAAAEAAMAAADDADAAAAAEAAQAAADEAC8AAAADAAMAAADEADAAAAADAAQAAADFAC8AAAAEAAMAAADFADAAAAAEAAQAAADGAC8AAAADAAMAAADGADAAAAADAAQAAADHAC8AAAAEAAMAAADHADAAAAAEAAQAAADIAC8AAAADAAMAAADIADAAAAADAAQAAADJAC8AAAAEAAMAAADJADAAAAAEAAQAAADKAC8AAAADAAMAAADKADAAAAADAAQAAADLAC8AAAAEAAMAAADLADAAAAAEAAQAAADMAC8AAAADAAMAAADMADAAAAADAAQAAADNAC8AAAAEAAMAAADNADAAAAAEAAQAAADOAC8AAAADAAMAAADOADAAAAADAAQAAADPAC8AAAAEAAMAAADPADAAAAAEAAQAAADQAC8AAAADAAMAAADQADAAAAADAAQAAADRAC8AAAAEAAMAAADRADAAAAAEAAQAAADSAC8AAAADAAMAAADSADAAAAADAAQAAADTAC8AAAAEAAMAAADTADAAAAAEAAQAAADUAC8AAAADAAMAAADUADAAAAADAAQAAADVAC8AAAAEAAMAAADVADAAAAAEAAQAAADWAC8AAAADAAMAAADWADAAAAADAAQAAADXAC8AAAAEAAMAAADXADAAAAAEAAQAAADYAC8AAAADAAMAAADYADAAAAADAAQAAADZAC8AAAAEAAMAAADZADAAAAAEAAQAAADaAC8AAAADAAMAAADaADAAAAADAAQAAADbAC8AAAAEAAMAAADbADAAAAAEAAQAAADcAC8AAAADAAMAAADcADAAAAADAAQAAADdAC8AAAAEAAMAAADdADAAAAAEAAQAAADeAC8AAAADAAMAAADeADAAAAADAAQAAADfAC8AAAAEAAMAAADfADAAAAAEAAQAAADgAC8AAAADAAMAAADgADAAAAADAAQAAADhAC8AAAAEAAMAAADhADAAAAAEAAQAAADiAC8AAAADAAMAAADiADAAAAADAAQAAADjAC8AAAAEAAMAAADjADAAAAAEAAQAAADkAC8AAAADAAMAAADkADAAAAADAAQAAADlAC8AAAAEAAMAAADlADAAAAAEAAQAAADmAC8AAAADAAMAAADmADAAAAADAAQAAADnAC8AAAAEAAMAAADnADAAAAAEAAQAAADoAC8AAAADAAMAAADoADAAAAADAAQAAADpAC8AAAAEAAMAAADpADAAAAAEAAQAAADqAC8AAAADAAMAAADqADAAAAADAAQAAADrAC8AAAAEAAMAAADrADAAAAAEAAQAAADsAC8AAAADAAMAAADsADAAAAADAAQAAADtAC8AAAAEAAMAAADtADAAAAAEAAQAAADuAC8AAAADAAMAAADuADAAAAADAAQAAADvAC8AAAAEAAMAAADvADAAAAAEAAQAAADwAC8AAAADAAMAAADwADAAAAADAAQAAADxAC8AAAAEAAMAAADxADAAAAAEAAQAAADyAC8AAAADAAMAAADyADAAAAADAAQAAADzAC8AAAAEAAMAAADzADAAAAAEAAQAAAD0AC8AAAADAAMAAAD0ADAAAAADAAQAAAD1AC8AAAAEAAMAAAD1ADAAAAAEAAQAAAD2AC8AAAADAAMAAAD2ADAAAAADAAQAAAD3AC8AAAAEAAMAAAD3ADAAAAAEAAQAAAD4AC8AAAADAAMAAAD4ADAAAAADAAQAAAD5AC8AAAAEAAMAAAD5ADAAAAAEAAQAAAD6AC8AAAADAAMAAAD6ADAAAAADAAQAAAD7AC8AAAAEAAMAAAD7ADAAAAAEAAQAAAD8AC8AAAADAAMAAAD8ADAAAAADAAQAAAD9AC8AAAAEAAMAAAD9ADAAAAAEAAQAAAD+AC8AAAADAAMAAAD+ADAAAAADAAQAAAD/AC8AAAAEAAMAAAD/ADAAAAAEAAQAAAAAAS8AAAADAAMAAAAAATAAAAADAAQAAAABAS8AAAAEAAMAAAABATAAAAAEAAQAAAACAS8AAAADAAMAAAACATAAAAADAAQAAAADAS8AAAAEAAMAAAADATAAAAAEAAQAAAAEAS8AAAADAAMAAAAEATAAAAADAAQAAAAFAS8AAAAEAAMAAAAFATAAAAAEAAQAAAAGAS8AAAADAAMAAAAGATAAAAADAAQAAAAHAS8AAAAEAAMAAAAHATAAAAAEAAQAAAA=")
+tile_set = SubResource("TileSet_2oen0")
+
+[node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
+
+[node name="UninteractableTileMap" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AACd/y0AAAAKABwAAACd/y4AAAAKAB0AAACe/y0AAAALABwAAACe/y4AAAALAB0AAACf/y0AAAAMABwAAACf/y4AAAAMAB0AAAA1AC0AAAAKABwAAAA1AC4AAAAKAB0AAAA2AC0AAAALABwAAAA2AC4AAAALAB0AAAA3AC0AAAAMABwAAAA3AC4AAAAMAB0AAAA=")
+tile_set = SubResource("TileSet_ksgdk")
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="CoinSpawner" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1440, 737)
+
+[node name="CoinSpawner2" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1420, 737)
+
+[node name="CoinSpawner3" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1400, 737)
+
+[node name="CoinSpawner4" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1380, 737)
+
+[node name="CoinSpawner5" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1360, 737)
+
+[node name="CoinSpawner6" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1340, 737)
+
+[node name="CoinSpawner7" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1320, 737)
+
+[node name="CoinSpawner8" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1300, 737)
+
+[node name="CoinSpawner9" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1280, 737)
+
+[node name="CoinSpawner10" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1260, 737)
+
+[node name="CoinSpawner11" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1239, 737)
+
+[node name="CoinSpawner12" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1219, 737)
+
+[node name="CoinSpawner13" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1199, 737)
+
+[node name="CoinSpawner14" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1179, 737)
+
+[node name="CoinSpawner15" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1159, 737)
+
+[node name="CoinSpawner16" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1139, 737)
+
+[node name="CoinSpawner17" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1119, 737)
+
+[node name="CoinSpawner18" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1099, 737)
+
+[node name="CoinSpawner19" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1079, 737)
+
+[node name="CoinSpawner20" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1059, 737)
+
+[node name="CoinSpawner21" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1038, 737)
+
+[node name="CoinSpawner22" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1018, 737)
+
+[node name="CoinSpawner23" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-998, 737)
+
+[node name="CoinSpawner24" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-978, 737)
+
+[node name="CoinSpawner25" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-958, 737)
+
+[node name="CoinSpawner26" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1440, 712)
+
+[node name="CoinSpawner27" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1420, 712)
+
+[node name="CoinSpawner28" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1400, 712)
+
+[node name="CoinSpawner29" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1380, 712)
+
+[node name="CoinSpawner30" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1360, 712)
+
+[node name="CoinSpawner31" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1340, 712)
+
+[node name="CoinSpawner32" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1320, 712)
+
+[node name="CoinSpawner33" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1300, 712)
+
+[node name="CoinSpawner34" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1280, 712)
+
+[node name="CoinSpawner35" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1260, 712)
+
+[node name="CoinSpawner36" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1239, 712)
+
+[node name="CoinSpawner37" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1219, 712)
+
+[node name="CoinSpawner38" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1199, 712)
+
+[node name="CoinSpawner39" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1179, 712)
+
+[node name="CoinSpawner40" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1159, 712)
+
+[node name="CoinSpawner41" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1139, 712)
+
+[node name="CoinSpawner42" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1119, 712)
+
+[node name="CoinSpawner43" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1099, 712)
+
+[node name="CoinSpawner44" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1079, 712)
+
+[node name="CoinSpawner45" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1059, 712)
+
+[node name="CoinSpawner46" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1038, 712)
+
+[node name="CoinSpawner47" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-1018, 712)
+
+[node name="CoinSpawner48" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-998, 712)
+
+[node name="CoinSpawner49" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-978, 712)
+
+[node name="CoinSpawner50" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-958, 712)
+
+[node name="CoinSpawner51" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-752, 737)
+
+[node name="CoinSpawner52" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-732, 737)
+
+[node name="CoinSpawner53" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-712, 737)
+
+[node name="CoinSpawner54" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-692, 737)
+
+[node name="CoinSpawner55" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-672, 737)
+
+[node name="CoinSpawner56" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-652, 737)
+
+[node name="CoinSpawner57" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-632, 737)
+
+[node name="CoinSpawner58" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-612, 737)
+
+[node name="CoinSpawner59" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-592, 737)
+
+[node name="CoinSpawner60" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-572, 737)
+
+[node name="CoinSpawner61" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-551, 737)
+
+[node name="CoinSpawner62" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-531, 737)
+
+[node name="CoinSpawner63" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-511, 737)
+
+[node name="CoinSpawner64" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-491, 737)
+
+[node name="CoinSpawner65" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-471, 737)
+
+[node name="CoinSpawner66" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-451, 737)
+
+[node name="CoinSpawner67" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-431, 737)
+
+[node name="CoinSpawner68" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-411, 737)
+
+[node name="CoinSpawner69" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-391, 737)
+
+[node name="CoinSpawner70" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-371, 737)
+
+[node name="CoinSpawner71" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-350, 737)
+
+[node name="CoinSpawner72" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-330, 737)
+
+[node name="CoinSpawner73" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-310, 737)
+
+[node name="CoinSpawner74" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-290, 737)
+
+[node name="CoinSpawner75" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-270, 737)
+
+[node name="CoinSpawner76" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-752, 712)
+
+[node name="CoinSpawner77" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-732, 712)
+
+[node name="CoinSpawner78" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-712, 712)
+
+[node name="CoinSpawner79" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-692, 712)
+
+[node name="CoinSpawner80" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-672, 712)
+
+[node name="CoinSpawner81" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-652, 712)
+
+[node name="CoinSpawner82" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-632, 712)
+
+[node name="CoinSpawner83" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-612, 712)
+
+[node name="CoinSpawner84" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-592, 712)
+
+[node name="CoinSpawner85" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-572, 712)
+
+[node name="CoinSpawner86" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-551, 712)
+
+[node name="CoinSpawner87" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-531, 712)
+
+[node name="CoinSpawner88" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-511, 712)
+
+[node name="CoinSpawner89" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-491, 712)
+
+[node name="CoinSpawner90" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-471, 712)
+
+[node name="CoinSpawner91" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-451, 712)
+
+[node name="CoinSpawner92" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-431, 712)
+
+[node name="CoinSpawner93" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-411, 712)
+
+[node name="CoinSpawner94" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-391, 712)
+
+[node name="CoinSpawner95" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-371, 712)
+
+[node name="CoinSpawner96" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-350, 712)
+
+[node name="CoinSpawner97" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-330, 712)
+
+[node name="CoinSpawner98" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-310, 712)
+
+[node name="CoinSpawner99" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-290, 712)
+
+[node name="CoinSpawner100" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(-270, 712)
+
+[node name="CoinSpawner101" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1216, 705)
+
+[node name="CoinSpawner102" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1236, 705)
+
+[node name="CoinSpawner103" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1256, 705)
+
+[node name="CoinSpawner104" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1276, 705)
+
+[node name="CoinSpawner105" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1296, 705)
+
+[node name="CoinSpawner106" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1316, 705)
+
+[node name="CoinSpawner107" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1336, 705)
+
+[node name="CoinSpawner108" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1356, 705)
+
+[node name="CoinSpawner109" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1376, 705)
+
+[node name="CoinSpawner110" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1396, 705)
+
+[node name="CoinSpawner111" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1417, 705)
+
+[node name="CoinSpawner112" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1437, 705)
+
+[node name="CoinSpawner113" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1457, 705)
+
+[node name="CoinSpawner114" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1477, 705)
+
+[node name="CoinSpawner115" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1497, 705)
+
+[node name="CoinSpawner116" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1517, 705)
+
+[node name="CoinSpawner117" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1537, 705)
+
+[node name="CoinSpawner118" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1557, 705)
+
+[node name="CoinSpawner119" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1577, 705)
+
+[node name="CoinSpawner120" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1597, 705)
+
+[node name="CoinSpawner121" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1618, 705)
+
+[node name="CoinSpawner122" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1638, 705)
+
+[node name="CoinSpawner123" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1658, 705)
+
+[node name="CoinSpawner124" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1678, 705)
+
+[node name="CoinSpawner125" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1698, 705)
+
+[node name="CoinSpawner126" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1216, 680)
+
+[node name="CoinSpawner127" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1236, 680)
+
+[node name="CoinSpawner128" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1256, 680)
+
+[node name="CoinSpawner129" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1276, 680)
+
+[node name="CoinSpawner130" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1296, 680)
+
+[node name="CoinSpawner131" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1316, 680)
+
+[node name="CoinSpawner132" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1336, 680)
+
+[node name="CoinSpawner133" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1356, 680)
+
+[node name="CoinSpawner134" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1376, 680)
+
+[node name="CoinSpawner135" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1396, 680)
+
+[node name="CoinSpawner136" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1417, 680)
+
+[node name="CoinSpawner137" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1437, 680)
+
+[node name="CoinSpawner138" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1457, 680)
+
+[node name="CoinSpawner139" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1477, 680)
+
+[node name="CoinSpawner140" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1497, 680)
+
+[node name="CoinSpawner141" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1517, 680)
+
+[node name="CoinSpawner142" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1537, 680)
+
+[node name="CoinSpawner143" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1557, 680)
+
+[node name="CoinSpawner144" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1577, 680)
+
+[node name="CoinSpawner145" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1597, 680)
+
+[node name="CoinSpawner146" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1618, 680)
+
+[node name="CoinSpawner147" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1638, 680)
+
+[node name="CoinSpawner148" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1658, 680)
+
+[node name="CoinSpawner149" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1678, 680)
+
+[node name="CoinSpawner150" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1698, 680)
+
+[node name="CoinSpawner151" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1904, 705)
+
+[node name="CoinSpawner152" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1924, 705)
+
+[node name="CoinSpawner153" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1944, 705)
+
+[node name="CoinSpawner154" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1964, 705)
+
+[node name="CoinSpawner155" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1984, 705)
+
+[node name="CoinSpawner156" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2004, 705)
+
+[node name="CoinSpawner157" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2024, 705)
+
+[node name="CoinSpawner158" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2044, 705)
+
+[node name="CoinSpawner159" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2064, 705)
+
+[node name="CoinSpawner160" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2084, 705)
+
+[node name="CoinSpawner161" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2105, 705)
+
+[node name="CoinSpawner162" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2125, 705)
+
+[node name="CoinSpawner163" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2145, 705)
+
+[node name="CoinSpawner164" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2165, 705)
+
+[node name="CoinSpawner165" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2185, 705)
+
+[node name="CoinSpawner166" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2205, 705)
+
+[node name="CoinSpawner167" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2225, 705)
+
+[node name="CoinSpawner168" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2245, 705)
+
+[node name="CoinSpawner169" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2265, 705)
+
+[node name="CoinSpawner170" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2285, 705)
+
+[node name="CoinSpawner171" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2306, 705)
+
+[node name="CoinSpawner172" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2326, 705)
+
+[node name="CoinSpawner173" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2346, 705)
+
+[node name="CoinSpawner174" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2366, 705)
+
+[node name="CoinSpawner175" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2386, 705)
+
+[node name="CoinSpawner176" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1904, 680)
+
+[node name="CoinSpawner177" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1924, 680)
+
+[node name="CoinSpawner178" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1944, 680)
+
+[node name="CoinSpawner179" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1964, 680)
+
+[node name="CoinSpawner180" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(1984, 680)
+
+[node name="CoinSpawner181" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2004, 680)
+
+[node name="CoinSpawner182" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2024, 680)
+
+[node name="CoinSpawner183" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2044, 680)
+
+[node name="CoinSpawner184" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2064, 680)
+
+[node name="CoinSpawner185" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2084, 680)
+
+[node name="CoinSpawner186" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2105, 680)
+
+[node name="CoinSpawner187" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2125, 680)
+
+[node name="CoinSpawner188" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2145, 680)
+
+[node name="CoinSpawner189" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2165, 680)
+
+[node name="CoinSpawner190" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2185, 680)
+
+[node name="CoinSpawner191" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2205, 680)
+
+[node name="CoinSpawner192" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2225, 680)
+
+[node name="CoinSpawner193" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2245, 680)
+
+[node name="CoinSpawner194" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2265, 680)
+
+[node name="CoinSpawner195" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2285, 680)
+
+[node name="CoinSpawner196" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2306, 680)
+
+[node name="CoinSpawner197" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2326, 680)
+
+[node name="CoinSpawner198" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2346, 680)
+
+[node name="CoinSpawner199" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2366, 680)
+
+[node name="CoinSpawner200" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2386, 680)
+
+[node name="CoinSpawner201" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2942, 697)
+
+[node name="CoinSpawner202" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2962, 697)
+
+[node name="CoinSpawner203" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2982, 697)
+
+[node name="CoinSpawner204" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3002, 697)
+
+[node name="CoinSpawner205" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3022, 697)
+
+[node name="CoinSpawner206" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3042, 697)
+
+[node name="CoinSpawner207" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3062, 697)
+
+[node name="CoinSpawner208" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3082, 697)
+
+[node name="CoinSpawner209" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3102, 697)
+
+[node name="CoinSpawner210" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3122, 697)
+
+[node name="CoinSpawner211" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3143, 697)
+
+[node name="CoinSpawner212" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3163, 697)
+
+[node name="CoinSpawner213" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3183, 697)
+
+[node name="CoinSpawner214" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3203, 697)
+
+[node name="CoinSpawner215" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3223, 697)
+
+[node name="CoinSpawner216" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3243, 697)
+
+[node name="CoinSpawner217" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3263, 697)
+
+[node name="CoinSpawner218" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3283, 697)
+
+[node name="CoinSpawner219" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3303, 697)
+
+[node name="CoinSpawner220" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3323, 697)
+
+[node name="CoinSpawner221" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3344, 697)
+
+[node name="CoinSpawner222" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3364, 697)
+
+[node name="CoinSpawner223" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3384, 697)
+
+[node name="CoinSpawner224" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3404, 697)
+
+[node name="CoinSpawner225" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3424, 697)
+
+[node name="CoinSpawner226" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2942, 672)
+
+[node name="CoinSpawner227" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2962, 672)
+
+[node name="CoinSpawner228" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2982, 672)
+
+[node name="CoinSpawner229" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3002, 672)
+
+[node name="CoinSpawner230" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3022, 672)
+
+[node name="CoinSpawner231" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3042, 672)
+
+[node name="CoinSpawner232" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3062, 672)
+
+[node name="CoinSpawner233" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3082, 672)
+
+[node name="CoinSpawner234" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3102, 672)
+
+[node name="CoinSpawner235" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3122, 672)
+
+[node name="CoinSpawner236" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3143, 672)
+
+[node name="CoinSpawner237" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3163, 672)
+
+[node name="CoinSpawner238" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3183, 672)
+
+[node name="CoinSpawner239" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3203, 672)
+
+[node name="CoinSpawner240" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3223, 672)
+
+[node name="CoinSpawner241" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3243, 672)
+
+[node name="CoinSpawner242" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3263, 672)
+
+[node name="CoinSpawner243" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3283, 672)
+
+[node name="CoinSpawner244" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3303, 672)
+
+[node name="CoinSpawner245" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3323, 672)
+
+[node name="CoinSpawner246" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3344, 672)
+
+[node name="CoinSpawner247" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3364, 672)
+
+[node name="CoinSpawner248" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3384, 672)
+
+[node name="CoinSpawner249" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3404, 672)
+
+[node name="CoinSpawner250" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3424, 672)
+
+[node name="CoinSpawner251" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3630, 697)
+
+[node name="CoinSpawner252" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3650, 697)
+
+[node name="CoinSpawner253" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3670, 697)
+
+[node name="CoinSpawner254" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3690, 697)
+
+[node name="CoinSpawner255" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3710, 697)
+
+[node name="CoinSpawner256" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3730, 697)
+
+[node name="CoinSpawner257" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3750, 697)
+
+[node name="CoinSpawner258" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3770, 697)
+
+[node name="CoinSpawner259" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3790, 697)
+
+[node name="CoinSpawner260" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3810, 697)
+
+[node name="CoinSpawner261" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3831, 697)
+
+[node name="CoinSpawner262" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3851, 697)
+
+[node name="CoinSpawner263" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3871, 697)
+
+[node name="CoinSpawner264" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3891, 697)
+
+[node name="CoinSpawner265" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3911, 697)
+
+[node name="CoinSpawner266" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3931, 697)
+
+[node name="CoinSpawner267" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3951, 697)
+
+[node name="CoinSpawner268" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3971, 697)
+
+[node name="CoinSpawner269" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3991, 697)
+
+[node name="CoinSpawner270" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4011, 697)
+
+[node name="CoinSpawner271" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4032, 697)
+
+[node name="CoinSpawner272" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4052, 697)
+
+[node name="CoinSpawner273" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4072, 697)
+
+[node name="CoinSpawner274" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4092, 697)
+
+[node name="CoinSpawner275" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4112, 697)
+
+[node name="CoinSpawner276" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3630, 672)
+
+[node name="CoinSpawner277" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3650, 672)
+
+[node name="CoinSpawner278" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3670, 672)
+
+[node name="CoinSpawner279" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3690, 672)
+
+[node name="CoinSpawner280" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3710, 672)
+
+[node name="CoinSpawner281" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3730, 672)
+
+[node name="CoinSpawner282" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3750, 672)
+
+[node name="CoinSpawner283" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3770, 672)
+
+[node name="CoinSpawner284" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3790, 672)
+
+[node name="CoinSpawner285" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3810, 672)
+
+[node name="CoinSpawner286" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3831, 672)
+
+[node name="CoinSpawner287" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3851, 672)
+
+[node name="CoinSpawner288" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3871, 672)
+
+[node name="CoinSpawner289" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3891, 672)
+
+[node name="CoinSpawner290" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3911, 672)
+
+[node name="CoinSpawner291" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3931, 672)
+
+[node name="CoinSpawner292" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3951, 672)
+
+[node name="CoinSpawner293" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3971, 672)
+
+[node name="CoinSpawner294" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3991, 672)
+
+[node name="CoinSpawner295" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4011, 672)
+
+[node name="CoinSpawner296" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4032, 672)
+
+[node name="CoinSpawner297" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4052, 672)
+
+[node name="CoinSpawner298" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4072, 672)
+
+[node name="CoinSpawner299" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4092, 672)
+
+[node name="CoinSpawner300" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(4112, 672)
+
+[node name="CoinSpawner301" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2088, 593)
+
+[node name="CoinSpawner302" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2108, 593)
+
+[node name="CoinSpawner303" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2128, 593)
+
+[node name="CoinSpawner304" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2148, 593)
+
+[node name="CoinSpawner305" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2168, 593)
+
+[node name="CoinSpawner306" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2188, 593)
+
+[node name="CoinSpawner307" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2208, 593)
+
+[node name="CoinSpawner308" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2228, 593)
+
+[node name="CoinSpawner309" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2248, 593)
+
+[node name="CoinSpawner310" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2268, 593)
+
+[node name="CoinSpawner311" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2289, 593)
+
+[node name="CoinSpawner312" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2309, 593)
+
+[node name="CoinSpawner313" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2329, 593)
+
+[node name="CoinSpawner314" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2349, 593)
+
+[node name="CoinSpawner315" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2369, 593)
+
+[node name="CoinSpawner316" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2389, 593)
+
+[node name="CoinSpawner317" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2409, 593)
+
+[node name="CoinSpawner318" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2429, 593)
+
+[node name="CoinSpawner319" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2449, 593)
+
+[node name="CoinSpawner320" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2469, 593)
+
+[node name="CoinSpawner321" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2490, 593)
+
+[node name="CoinSpawner322" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2510, 593)
+
+[node name="CoinSpawner323" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2530, 593)
+
+[node name="CoinSpawner324" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2550, 593)
+
+[node name="CoinSpawner325" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2570, 593)
+
+[node name="CoinSpawner326" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2088, 568)
+
+[node name="CoinSpawner327" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2108, 568)
+
+[node name="CoinSpawner328" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2128, 568)
+
+[node name="CoinSpawner329" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2148, 568)
+
+[node name="CoinSpawner330" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2168, 568)
+
+[node name="CoinSpawner331" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2188, 568)
+
+[node name="CoinSpawner332" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2208, 568)
+
+[node name="CoinSpawner333" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2228, 568)
+
+[node name="CoinSpawner334" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2248, 568)
+
+[node name="CoinSpawner335" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2268, 568)
+
+[node name="CoinSpawner336" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2289, 568)
+
+[node name="CoinSpawner337" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2309, 568)
+
+[node name="CoinSpawner338" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2329, 568)
+
+[node name="CoinSpawner339" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2349, 568)
+
+[node name="CoinSpawner340" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2369, 568)
+
+[node name="CoinSpawner341" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2389, 568)
+
+[node name="CoinSpawner342" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2409, 568)
+
+[node name="CoinSpawner343" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2429, 568)
+
+[node name="CoinSpawner344" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2449, 568)
+
+[node name="CoinSpawner345" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2469, 568)
+
+[node name="CoinSpawner346" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2490, 568)
+
+[node name="CoinSpawner347" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2510, 568)
+
+[node name="CoinSpawner348" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2530, 568)
+
+[node name="CoinSpawner349" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2550, 568)
+
+[node name="CoinSpawner350" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2570, 568)
+
+[node name="CoinSpawner351" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2776, 593)
+
+[node name="CoinSpawner352" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2796, 593)
+
+[node name="CoinSpawner353" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2816, 593)
+
+[node name="CoinSpawner354" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2836, 593)
+
+[node name="CoinSpawner355" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2856, 593)
+
+[node name="CoinSpawner356" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2876, 593)
+
+[node name="CoinSpawner357" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2896, 593)
+
+[node name="CoinSpawner358" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2916, 593)
+
+[node name="CoinSpawner359" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2936, 593)
+
+[node name="CoinSpawner360" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2956, 593)
+
+[node name="CoinSpawner361" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2977, 593)
+
+[node name="CoinSpawner362" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2997, 593)
+
+[node name="CoinSpawner363" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3017, 593)
+
+[node name="CoinSpawner364" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3037, 593)
+
+[node name="CoinSpawner365" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3057, 593)
+
+[node name="CoinSpawner366" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3077, 593)
+
+[node name="CoinSpawner367" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3097, 593)
+
+[node name="CoinSpawner368" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3117, 593)
+
+[node name="CoinSpawner369" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3137, 593)
+
+[node name="CoinSpawner370" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3157, 593)
+
+[node name="CoinSpawner371" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3178, 593)
+
+[node name="CoinSpawner372" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3198, 593)
+
+[node name="CoinSpawner373" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3218, 593)
+
+[node name="CoinSpawner374" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3238, 593)
+
+[node name="CoinSpawner375" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3258, 593)
+
+[node name="CoinSpawner376" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2776, 568)
+
+[node name="CoinSpawner377" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2796, 568)
+
+[node name="CoinSpawner378" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2816, 568)
+
+[node name="CoinSpawner379" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2836, 568)
+
+[node name="CoinSpawner380" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2856, 568)
+
+[node name="CoinSpawner381" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2876, 568)
+
+[node name="CoinSpawner382" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2896, 568)
+
+[node name="CoinSpawner383" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2916, 568)
+
+[node name="CoinSpawner384" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2936, 568)
+
+[node name="CoinSpawner385" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2956, 568)
+
+[node name="CoinSpawner386" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2977, 568)
+
+[node name="CoinSpawner387" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2997, 568)
+
+[node name="CoinSpawner388" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3017, 568)
+
+[node name="CoinSpawner389" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3037, 568)
+
+[node name="CoinSpawner390" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3057, 568)
+
+[node name="CoinSpawner391" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3077, 568)
+
+[node name="CoinSpawner392" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3097, 568)
+
+[node name="CoinSpawner393" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3117, 568)
+
+[node name="CoinSpawner394" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3137, 568)
+
+[node name="CoinSpawner395" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3157, 568)
+
+[node name="CoinSpawner396" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3178, 568)
+
+[node name="CoinSpawner397" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3198, 568)
+
+[node name="CoinSpawner398" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3218, 568)
+
+[node name="CoinSpawner399" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3238, 568)
+
+[node name="CoinSpawner400" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3258, 568)
+
+[node name="CoinSpawner401" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2088, 537)
+
+[node name="CoinSpawner402" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2108, 537)
+
+[node name="CoinSpawner403" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2128, 537)
+
+[node name="CoinSpawner404" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2148, 537)
+
+[node name="CoinSpawner405" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2168, 537)
+
+[node name="CoinSpawner406" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2188, 537)
+
+[node name="CoinSpawner407" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2208, 537)
+
+[node name="CoinSpawner408" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2228, 537)
+
+[node name="CoinSpawner409" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2248, 537)
+
+[node name="CoinSpawner410" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2268, 537)
+
+[node name="CoinSpawner411" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2289, 537)
+
+[node name="CoinSpawner412" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2309, 537)
+
+[node name="CoinSpawner413" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2329, 537)
+
+[node name="CoinSpawner414" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2349, 537)
+
+[node name="CoinSpawner415" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2369, 537)
+
+[node name="CoinSpawner416" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2389, 537)
+
+[node name="CoinSpawner417" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2409, 537)
+
+[node name="CoinSpawner418" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2429, 537)
+
+[node name="CoinSpawner419" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2449, 537)
+
+[node name="CoinSpawner420" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2469, 537)
+
+[node name="CoinSpawner421" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2490, 537)
+
+[node name="CoinSpawner422" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2510, 537)
+
+[node name="CoinSpawner423" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2530, 537)
+
+[node name="CoinSpawner424" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2550, 537)
+
+[node name="CoinSpawner425" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2570, 537)
+
+[node name="CoinSpawner426" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2088, 512)
+
+[node name="CoinSpawner427" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2108, 512)
+
+[node name="CoinSpawner428" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2128, 512)
+
+[node name="CoinSpawner429" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2148, 512)
+
+[node name="CoinSpawner430" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2168, 512)
+
+[node name="CoinSpawner431" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2188, 512)
+
+[node name="CoinSpawner432" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2208, 512)
+
+[node name="CoinSpawner433" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2228, 512)
+
+[node name="CoinSpawner434" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2248, 512)
+
+[node name="CoinSpawner435" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2268, 512)
+
+[node name="CoinSpawner436" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2289, 512)
+
+[node name="CoinSpawner437" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2309, 512)
+
+[node name="CoinSpawner438" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2329, 512)
+
+[node name="CoinSpawner439" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2349, 512)
+
+[node name="CoinSpawner440" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2369, 512)
+
+[node name="CoinSpawner441" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2389, 512)
+
+[node name="CoinSpawner442" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2409, 512)
+
+[node name="CoinSpawner443" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2429, 512)
+
+[node name="CoinSpawner444" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2449, 512)
+
+[node name="CoinSpawner445" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2469, 512)
+
+[node name="CoinSpawner446" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2490, 512)
+
+[node name="CoinSpawner447" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2510, 512)
+
+[node name="CoinSpawner448" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2530, 512)
+
+[node name="CoinSpawner449" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2550, 512)
+
+[node name="CoinSpawner450" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2570, 512)
+
+[node name="CoinSpawner451" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2776, 537)
+
+[node name="CoinSpawner452" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2796, 537)
+
+[node name="CoinSpawner453" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2816, 537)
+
+[node name="CoinSpawner454" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2836, 537)
+
+[node name="CoinSpawner455" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2856, 537)
+
+[node name="CoinSpawner456" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2876, 537)
+
+[node name="CoinSpawner457" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2896, 537)
+
+[node name="CoinSpawner458" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2916, 537)
+
+[node name="CoinSpawner459" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2936, 537)
+
+[node name="CoinSpawner460" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2956, 537)
+
+[node name="CoinSpawner461" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2977, 537)
+
+[node name="CoinSpawner462" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2997, 537)
+
+[node name="CoinSpawner463" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3017, 537)
+
+[node name="CoinSpawner464" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3037, 537)
+
+[node name="CoinSpawner465" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3057, 537)
+
+[node name="CoinSpawner466" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3077, 537)
+
+[node name="CoinSpawner467" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3097, 537)
+
+[node name="CoinSpawner468" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3117, 537)
+
+[node name="CoinSpawner469" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3137, 537)
+
+[node name="CoinSpawner470" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3157, 537)
+
+[node name="CoinSpawner471" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3178, 537)
+
+[node name="CoinSpawner472" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3198, 537)
+
+[node name="CoinSpawner473" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3218, 537)
+
+[node name="CoinSpawner474" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3238, 537)
+
+[node name="CoinSpawner475" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3258, 537)
+
+[node name="CoinSpawner476" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2776, 512)
+
+[node name="CoinSpawner477" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2796, 512)
+
+[node name="CoinSpawner478" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2816, 512)
+
+[node name="CoinSpawner479" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2836, 512)
+
+[node name="CoinSpawner480" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2856, 512)
+
+[node name="CoinSpawner481" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2876, 512)
+
+[node name="CoinSpawner482" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2896, 512)
+
+[node name="CoinSpawner483" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2916, 512)
+
+[node name="CoinSpawner484" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2936, 512)
+
+[node name="CoinSpawner485" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2956, 512)
+
+[node name="CoinSpawner486" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2977, 512)
+
+[node name="CoinSpawner487" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(2997, 512)
+
+[node name="CoinSpawner488" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3017, 512)
+
+[node name="CoinSpawner489" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3037, 512)
+
+[node name="CoinSpawner490" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3057, 512)
+
+[node name="CoinSpawner491" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3077, 512)
+
+[node name="CoinSpawner492" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3097, 512)
+
+[node name="CoinSpawner493" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3117, 512)
+
+[node name="CoinSpawner494" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3137, 512)
+
+[node name="CoinSpawner495" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3157, 512)
+
+[node name="CoinSpawner496" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3178, 512)
+
+[node name="CoinSpawner497" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3198, 512)
+
+[node name="CoinSpawner498" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3218, 512)
+
+[node name="CoinSpawner499" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3238, 512)
+
+[node name="CoinSpawner500" parent="Coins" instance=ExtResource("17_modpa")]
+position = Vector2(3258, 512)

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryObject" load_steps=3 format=3 uid="uid://dlisei5wjrpv6"]
+
+[ext_resource type="Script" uid="uid://bfawua5a4gpjs" path="res://resources/inventory_object.gd" id="1_iv8oc"]
+[ext_resource type="Texture2D" uid="uid://l2imy7qhim78" path="res://assets/coins/coin-ball.png" id="1_xe7n6"]
+
+[resource]
+script = ExtResource("1_iv8oc")
+id = "coin_gold"
+world_texture = ExtResource("1_xe7n6")
+hud_texture = ExtResource("1_xe7n6")
+metadata/_custom_type_script = "uid://bfawua5a4gpjs"

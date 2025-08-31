@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://btxwu61k72wec"]
+
+[ext_resource type="Script" uid="uid://bn66kbmxl3kxt" path="res://Scenes/manager/inventory_manager.gd" id="1_45vtl"]
+[ext_resource type="AudioStream" uid="uid://dscaild2bmnb0" path="res://assets/FreeSFX/GameSFX/PickUp/Retro PickUp Coin 04.wav" id="2_vse47"]
+
+[node name="InventoryManager" type="Node"]
+script = ExtResource("1_45vtl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_vse47")

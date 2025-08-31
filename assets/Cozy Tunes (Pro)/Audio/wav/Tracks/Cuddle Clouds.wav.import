@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://du1wsv3k2g8cy"
+path="res://.godot/imported/Cuddle Clouds.wav-3a9bd12b9be21cd3cb27e5f2f29046c5.sample"
+
+[deps]
+
+source_file="res://assets/Cozy Tunes (Pro)/Audio/wav/Tracks/Cuddle Clouds.wav"
+dest_files=["res://.godot/imported/Cuddle Clouds.wav-3a9bd12b9be21cd3cb27e5f2f29046c5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hinpd6jnwxnc"]
+
+[ext_resource type="Script" uid="uid://cilc07nuhbbnp" path="res://Scenes/manager/level_manager.gd" id="1_g37ma"]
+[ext_resource type="AudioStream" uid="uid://1amrg31yebju" path="res://assets/Cozy Tunes (Pro)/Audio/wav/Tracks/Floating Dream.wav" id="2_28re6"]
+
+[node name="LevelManager" type="Node"]
+script = ExtResource("1_g37ma")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_28re6")
